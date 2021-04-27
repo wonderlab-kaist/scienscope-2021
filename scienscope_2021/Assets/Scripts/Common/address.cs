@@ -9,7 +9,8 @@ public static class address
     //public static GameObject aimed_object;
 
     public static Dictionary<string, int[]> RFID_numbers = new Dictionary<string, int[]>
-    {
+    {   //Dictionary 자료구조. 태그값
+
         // Order does not matter
         {"10006E69F8EF", new int[]{ 2, 1 } },
         {"10006E605A44", new int[]{ 2, 2 } },
@@ -37,13 +38,13 @@ public static class address
         {"5700A4B982C8", new int[]{ 4, 1 } },
         {"5700A4AA2178", new int[]{ 4, 2 } },
     };
-
+    
     public static void SetLastRFID(string rfid)
     {
         lastRFID = rfid;
     }
 
-    public static int GetCurrentSceneNumber()
+    public static int GetCurrentSceneNumber() //현재 씬넘버
     {
         
         if (!RFID_numbers.ContainsKey(lastRFID))
@@ -53,7 +54,7 @@ public static class address
         return RFID_numbers[lastRFID][0];
     }
 
-    public static int GetCurrentSubSceneNumber()
+    public static int GetCurrentSubSceneNumber() //현재 서브 씬넘버
     {
         if (!RFID_numbers.ContainsKey(lastRFID))
         {
