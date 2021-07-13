@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class aarcall : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class aarcall : MonoBehaviour
     private AndroidJavaObject javaClassInstance;
     AndroidJavaClass jc;
 
-    //버튼에UI에 사용
-    public GameObject plugged;
-    public GameObject unplugged;
+    //버튼UI
+    //public GameObject plugged;
+    //public GameObject unplugged;
+
+    public GameObject Btn1;
+    public Sprite newsprite;
 
     private AndroidJavaObject plugin;
     private bool listening = false; //연결상태판단
@@ -32,14 +36,13 @@ public class aarcall : MonoBehaviour
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        
-            address.BTaddress = "CE:5F:E8:39:1B:7F"; // bluetooth address 가져오는 건 수정 예정
 
-        if (Application.platform == RuntimePlatform.Android) 
+        address.BTaddress = ""; // bluetooth address 가져오는 건 수정 예정
+        Btn1 = GetComponent<GameObject>();
+
+        if (Application.platform == RuntimePlatform.Android)
         {
             plugin = new AndroidJavaObject("com.beom.myble_v10.MainActivity");
-            //deb.text += plugin.CallStatic<string>("UnityCall", "CE:5F:E8:39:1B:7F");
-            //deb.text += "\n" + address.BTaddress;
 
             AndroidJavaClass androidJC = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
             AndroidJavaObject jo = androidJC.GetStatic<AndroidJavaObject>("currentActivity");
@@ -47,7 +50,6 @@ public class aarcall : MonoBehaviour
 
             if (jc != null)
             {
-                //deb.text = jc.ToString();
                 javaClassInstance = jc.CallStatic<AndroidJavaObject>("instance");
                 javaClassInstance.Call("setContext", jo);
                 javaClassInstance.Call("service_init", jo, address.BTaddress);
@@ -56,6 +58,29 @@ public class aarcall : MonoBehaviour
         }
         dataInput.initialize(); //datainput class (List 생성)
         Debug.Log("#1.aarcall start");
+    }
+
+    public void ClickWhat()
+    {
+        GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
+        // Btn1.GetComponent<Image>().sprite = newsprite;
+        switch (clickBtn.name)
+        {
+            case "Btn1":
+                address.BTaddress = "C0:71:93:E7:4E:9C";
+                deb.text = "1번" + address.BTaddress;
+                break;
+            case "Btn2":
+                address.BTaddress = "CF:8E:09:65:A2:2A";
+                deb.text = "2번" + address.BTaddress;
+                break;
+            case "Btn3":
+                address.BTaddress = "CE:5F:E8:39:1B:7F";
+                deb.text = "3번" + address.BTaddress;
+                break;
+        }
+        connect();
+
     }
 
     public void connect()
@@ -71,9 +96,16 @@ public class aarcall : MonoBehaviour
             listening = true;
         }
 
-        //버튼 각각 비활성화, 활성화
-        unplugged.SetActive(false);
-        plugged.SetActive(true);
+        if (listening == true)
+        {
+            //deb.text = "연결에 성공했습니다!\n 전시물에서 태그를 찾아보세요";
+        }
+        else
+        {
+            //deb.text = "연결에 실패했습니다!\n 청진기 번호를 다시 확인해주세요";
+        }
+        //unplugged.SetActive(false);
+        //plugged.SetActive(true);
 
         Debug.Log("#1.connected");
     }
@@ -88,12 +120,12 @@ public class aarcall : MonoBehaviour
         {
             javaClassInstance = jc.CallStatic<AndroidJavaObject>("instance");
             javaClassInstance.Call("setContext", jo);
-            javaClassInstance.Call("service_end");   
+            javaClassInstance.Call("service_end");
             listening = false;
         }
 
-        unplugged.SetActive(true);
-        plugged.SetActive(false);
+        //unplugged.SetActive(true);
+        //plugged.SetActive(false);
 
         Debug.Log("#1.disconnected");
 
@@ -115,7 +147,6 @@ public class aarcall : MonoBehaviour
             dataInput.data_in.Add(tmp); //List에 data입력 시작
             Debug.Log("#1.Data input start");
         }
-
     }
 
     public void makeToastMessage(string message)
