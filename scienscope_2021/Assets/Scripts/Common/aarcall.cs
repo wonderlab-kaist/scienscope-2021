@@ -36,8 +36,8 @@ public class aarcall : MonoBehaviour
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-
-        address.BTaddress = ""; // bluetooth address 가져오는 건 수정 예정
+        dataInput.initialize(); //datainput class (List 생성)
+        address.BTaddress = "E2:39:AF:10:0A:73"; // Default Bluetooth Address
         Btn1 = GetComponent<GameObject>();
 
         if (Application.platform == RuntimePlatform.Android)
@@ -56,7 +56,7 @@ public class aarcall : MonoBehaviour
                 listening = true;
             }
         }
-        dataInput.initialize(); //datainput class (List 생성)
+        
         Debug.Log("#1.aarcall start");
     }
 
@@ -139,13 +139,14 @@ public class aarcall : MonoBehaviour
         {
             string tmp;
             tmp = javaClassInstance.Call<string>("getData");
-            if (tmp.Split(':')[0] == "R")
+            /*if (tmp.Split(':')[0] == "R")
             {
                 deb.text = "태그인식완료";
-            }
+            }*/
 
             dataInput.data_in.Add(tmp); //List에 data입력 시작
-            Debug.Log("#1.Data input start");
+            deb.text = tmp;
+            //Debug.Log("#1.Data input start");
         }
     }
 
