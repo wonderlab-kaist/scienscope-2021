@@ -6,19 +6,18 @@ using UnityEngine.EventSystems;
 
 public class aarcall : MonoBehaviour
 {
-    public Text deb; //디버깅
+    //public Text deb; //디버깅
     private AndroidJavaObject javaClassInstance;
     AndroidJavaClass jc;
 
-    //버튼UI
-    //public GameObject plugged;
-    //public GameObject unplugged;
-
-    public GameObject Btn1;
+    public GameObject mainBtn;
     public Sprite newsprite;
+    public int mainNum;
+    public Text mainTxt;
 
     private AndroidJavaObject plugin;
-    private bool listening = false; //연결상태판단
+    private bool listening = false; 
+
 
     public readonly Dictionary<string, string> BTAdresses = new Dictionary<string, string>
     {
@@ -28,17 +27,17 @@ public class aarcall : MonoBehaviour
         { "02bd87c91839f460f47aab7416e79bb0", "CF:8E:09:65:A2:2A" }, // Labeled "2"
         { "7f43df7cd3722a08c97180f49c7315ed", "CE:5F:E8:39:1B:7F" }, // Labeled "3"
         { "3f45d020fe1e68e46318065ccfe8c456", "D4:51:6E:11:D5:B9" },
-        { "b2f388211244904efb04d657dce3855a", "E0:3F:F8:C2:E6:0E" },
         { "cceb48d01d5382b20e9a403c2f75ee76", "E0:D9:98:07:E5:26" }, // Labeled "4"
+        { "b2f388211244904efb04d657dce3855a", "E0:3F:F8:C2:E6:0E" }, // Labeled "5"
     };
 
 
     void Start()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        dataInput.initialize(); //datainput class (List 생성)
+        dataInput.initialize(); //datainput class
         address.BTaddress = "E2:39:AF:10:0A:73"; // Default Bluetooth Address
-        Btn1 = GetComponent<GameObject>();
+        mainBtn = GetComponent<GameObject>();
 
         if (Application.platform == RuntimePlatform.Android)
         {
@@ -60,36 +59,54 @@ public class aarcall : MonoBehaviour
                 listening = true;
             }
         }
-        
         Debug.Log("#1.aarcall start");
     }
 
-    public void ClickWhat()
+    public void ClickWhat() //plus minus Button
     {
         GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
-        // Btn1.GetComponent<Image>().sprite = newsprite;
         switch (clickBtn.name)
         {
-            case "Btn1":
-                address.BTaddress = "C0:71:93:E7:4E:9C";
-                deb.text = "1번" + address.BTaddress;
+            case "btn_minus": 
+                if (mainNum > 1)
+                {
+                    mainNum -= 1;
+                    mainTxt.GetComponent<Text>().text = mainNum.ToString();
+                }
+                //mainBtn.GetComponent<Image>().sprite = newsprite;
                 break;
-            case "Btn2":
-                address.BTaddress = "CF:8E:09:65:A2:2A";
-                deb.text = "2번" + address.BTaddress;
-                break;
-            case "Btn3":
-                address.BTaddress = "CE:5F:E8:39:1B:7F";
-                deb.text = "3번" + address.BTaddress;
+
+            case "btn_plus":
+                mainNum += 1;
+                mainTxt.GetComponent<Text>().text = mainNum.ToString();
                 break;
         }
-        connect();
-
     }
 
     public void connect()
     {
-        if (Application.platform != RuntimePlatform.Android) return; //안드로이드 플랫폼 아닐시 반환
+        switch (mainTxt.GetComponent<Text>().text)
+        {
+            case "1":
+                address.BTaddress = "C0:71:93:E7:4E:9C";
+                break;
+            case "2":
+                address.BTaddress = "CF:8E:09:65:A2:2A";
+                break;
+            case "3":
+                address.BTaddress = "CE:5F:E8:39:1B:7F";
+                break;
+            case "4":
+                address.BTaddress = "E0:D9:98:07:E5:26";
+                break;
+            case "5":
+                address.BTaddress = "E0:3F:F8:C2:E6:0E";
+                break;
+        }
+
+        Debug.Log("블루투스주소 잘 들어갔나?" + address.BTaddress);
+
+        if (Application.platform != RuntimePlatform.Android) return; 
         AndroidJavaClass androidJC = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject jo = androidJC.GetStatic<AndroidJavaObject>("currentActivity");
 
@@ -104,17 +121,7 @@ public class aarcall : MonoBehaviour
             listening = true;
         }
 
-        if (listening == true)
-        {
-            //deb.text = "연결에 성공했습니다!\n 전시물에서 태그를 찾아보세요";
-        }
-        else
-        {
-            //deb.text = "연결에 실패했습니다!\n 청진기 번호를 다시 확인해주세요";
-        }
-        //unplugged.SetActive(false);
-        //plugged.SetActive(true);
-
+        
         Debug.Log("#1.connected");
     }
 
@@ -132,9 +139,6 @@ public class aarcall : MonoBehaviour
             listening = false;
         }
 
-        //unplugged.SetActive(true);
-        //plugged.SetActive(false);
-
         Debug.Log("#1.disconnected");
 
     }
@@ -143,7 +147,7 @@ public class aarcall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (listening && Application.platform == RuntimePlatform.Android) //연결되있고, 안드로이드 플랫폼이면,
+        if (listening && Application.platform == RuntimePlatform.Android) 
         {
             string tmp;
             tmp = javaClassInstance.Call<string>("getData");
@@ -153,8 +157,6 @@ public class aarcall : MonoBehaviour
             }*/
 
             dataInput.data_in.Add(tmp); //List에 data입력 시작
-            deb.text = tmp;
-            //Debug.Log("#1.Data input start");
         }
     }
 
