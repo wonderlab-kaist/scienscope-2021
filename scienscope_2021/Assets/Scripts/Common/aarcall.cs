@@ -48,11 +48,15 @@ public class aarcall : MonoBehaviour
             AndroidJavaObject jo = androidJC.GetStatic<AndroidJavaObject>("currentActivity");
             jc = new AndroidJavaClass("com.beom.myble_v10.MainActivity");
 
+            
+
             if (jc != null)
             {
                 javaClassInstance = jc.CallStatic<AndroidJavaObject>("instance");
                 javaClassInstance.Call("setContext", jo);
                 javaClassInstance.Call("service_init", jo, address.BTaddress);
+                //connected = javaClassInstance.Call<bool>("reconnect", jo, address.BTaddress);
+                
                 listening = true;
             }
         }
@@ -88,11 +92,15 @@ public class aarcall : MonoBehaviour
         if (Application.platform != RuntimePlatform.Android) return; //안드로이드 플랫폼 아닐시 반환
         AndroidJavaClass androidJC = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject jo = androidJC.GetStatic<AndroidJavaObject>("currentActivity");
+
+        bool connected = false;
+
         if (jc != null)
         {
             javaClassInstance = jc.CallStatic<AndroidJavaObject>("instance");
             javaClassInstance.Call("setContext", jo);
-            javaClassInstance.Call("reconnect", jo, address.BTaddress);
+            connected = javaClassInstance.Call<bool>("reconnect", jo, address.BTaddress);
+            Debug.Log(connected);
             listening = true;
         }
 

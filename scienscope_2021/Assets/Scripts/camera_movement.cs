@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class camera_movement : MonoBehaviour
 {
+    public float gain = 0.000005f;
+
     public Text raw_data;
     public Camera cam;
 
@@ -37,7 +39,7 @@ public class camera_movement : MonoBehaviour
 
     void move_smooth(Vector3 delta_distance)
     {
-        StartCoroutine("moveSmooth", delta_distance * 0.000005f);
+        StartCoroutine("moveSmooth", delta_distance * gain);
 
     }
 

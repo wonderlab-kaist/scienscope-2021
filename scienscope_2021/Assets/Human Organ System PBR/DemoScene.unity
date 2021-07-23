@@ -886,6 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd7dc4fa634bc84db863939b20c06c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gain: 0.000005
   raw_data: {fileID: 177481153}
   cam: {fileID: 963194227}
 --- !u!4 &1155472696
@@ -1412,7 +1413,7 @@ PrefabInstance:
     - target: {fileID: 723569907174859907, guid: 8867d86be778bd347a2c52a783129186,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.246
+      value: -2.353
       objectReference: {fileID: 0}
     - target: {fileID: 723569907174859907, guid: 8867d86be778bd347a2c52a783129186,
         type: 3}
