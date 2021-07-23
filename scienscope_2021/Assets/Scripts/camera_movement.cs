@@ -27,23 +27,26 @@ public class camera_movement : MonoBehaviour
         {
             Vector3 delta = new Vector3(float.Parse(data[4]), float.Parse(data[3]), 0);
             move_smooth(delta);
-            //raw_data.text = ""+delta.x;
+            //raw_data.text = "";
+        }else if(income == "")
+        {
+            raw_data.text = "";
         }
     }
 
 
     void move_smooth(Vector3 delta_distance)
     {
-        StartCoroutine("moveSmooth", delta_distance * 0.00004f);
+        StartCoroutine("moveSmooth", delta_distance * 0.000005f);
 
     }
 
     IEnumerator moveSmooth(Vector3 d)
     {
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 4; i++)
         {
-            cam.transform.position -= d / 3f;
-            yield return new WaitForSeconds(0.02f / 3f);
+            cam.transform.position -= d / 4f;
+            yield return new WaitForSeconds(0.02f/4);
         }
 
     }
