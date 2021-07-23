@@ -23,23 +23,7 @@ public class dataInput : MonoBehaviour
         }
 
         return tmp.Split('!')[0];
-
-        return tmp;
-        /*string[] segments = tmp.Split('!');
         
-
-        string segment;
-
-        if (segments.Length >= 2)
-        {
-            segment = segments[0];
-            tmp = "";
-            for (int i = 1; i < segments.Length; i++) tmp += segments[i];
-            return segment;
-        }else
-        {
-            return "";
-        }*/
         
         
     }
