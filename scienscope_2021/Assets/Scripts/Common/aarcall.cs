@@ -104,7 +104,7 @@ public class aarcall : MonoBehaviour
                 break;
         }
 
-        Debug.Log("블루투스주소 잘 들어갔나?" + address.BTaddress);
+        //Debug.Log("블루투스주소 잘 들어갔나?" + address.BTaddress);
 
         if (Application.platform != RuntimePlatform.Android) return; 
         AndroidJavaClass androidJC = new AndroidJavaClass("com.unity3d.player.UnityPlayer");

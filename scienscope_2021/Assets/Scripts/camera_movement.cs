@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class camera_movement : MonoBehaviour
 {
-    public float gain = 0.000005f;
+    public float gain = 0.000009f;
 
     public Text raw_data;
     public Camera cam;
@@ -45,10 +45,10 @@ public class camera_movement : MonoBehaviour
 
     IEnumerator moveSmooth(Vector3 d)
     {
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 3; i++)
         {
-            cam.transform.position -= d / 4f;
-            yield return new WaitForSeconds(0.02f/4);
+            cam.transform.position -= d / 3f;
+            yield return new WaitForSeconds(0.02f/3f);
         }
 
     }
