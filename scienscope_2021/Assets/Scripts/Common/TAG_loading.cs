@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class TAG_loading : MonoBehaviour 
 {   //태그 인식되면, 컨텐츠 로딩하는 스크립트
 
-    public Text loading;
-    public Text loading2;
+    public Text heading;
+    public Text explain;
     
     void Start()
     {
@@ -32,8 +32,8 @@ public class TAG_loading : MonoBehaviour
         int target_scene_num = address.GetCurrentSceneNumber();//현재씬번호 받아오기
         if (target_scene_num != -1) //에러값이 아니면
         {
-            loading.text = "바닷속 니모와 친구들을 만나볼까요?";
-            loading2.text = "잠시만 기다려주세요...";
+            heading.text = "전시물 안으로 가는중";
+            explain.text = "잠시만 기다려주세요...";
             //씬전환
             SceneManager.LoadScene("1_play");
         }
