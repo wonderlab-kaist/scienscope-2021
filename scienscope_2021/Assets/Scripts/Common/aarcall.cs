@@ -6,17 +6,13 @@ using UnityEngine.EventSystems;
 
 public class aarcall : MonoBehaviour
 {
-    //public Text deb; //디버깅
     private AndroidJavaObject javaClassInstance;
     AndroidJavaClass jc;
 
-    public GameObject mainBtn;
-    public Sprite newsprite;
-    public int mainNum;
-    public Text mainTxt;
+    public Text deb;
 
     private AndroidJavaObject plugin;
-    private bool listening = false; 
+    private bool listening = false;
 
 
     public readonly Dictionary<string, string> BTAdresses = new Dictionary<string, string>
@@ -37,7 +33,7 @@ public class aarcall : MonoBehaviour
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         dataInput.initialize(); //datainput class
         address.BTaddress = "E2:39:AF:10:0A:73"; // Default Bluetooth Address
-        mainBtn = GetComponent<GameObject>();
+        //mainBtn = GetComponent<GameObject>();
 
         if (Application.platform == RuntimePlatform.Android)
         {
@@ -47,84 +43,32 @@ public class aarcall : MonoBehaviour
             AndroidJavaObject jo = androidJC.GetStatic<AndroidJavaObject>("currentActivity");
             jc = new AndroidJavaClass("com.beom.myble_v10.MainActivity");
 
-            
-
             if (jc != null)
             {
                 javaClassInstance = jc.CallStatic<AndroidJavaObject>("instance");
                 javaClassInstance.Call("setContext", jo);
                 javaClassInstance.Call("service_init", jo, address.BTaddress);
-                //connected = javaClassInstance.Call<bool>("reconnect", jo, address.BTaddress);
-                
                 listening = true;
             }
         }
         Debug.Log("#1.aarcall start");
     }
-
-    public void ClickWhat() //plus minus Button
-    {
-        GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
-        switch (clickBtn.name)
-        {
-            case "btn_minus": 
-                if (mainNum > 1)
-                {
-                    mainNum -= 1;
-                    mainTxt.GetComponent<Text>().text = mainNum.ToString();
-                }
-                //mainBtn.GetComponent<Image>().sprite = newsprite;
-                break;
-
-            case "btn_plus":
-                mainNum += 1;
-                mainTxt.GetComponent<Text>().text = mainNum.ToString();
-                break;
-        }
-    }
+    
 
     public void connect()
     {
-        switch (mainTxt.GetComponent<Text>().text)
-        {
-            case "1":
-                address.BTaddress = "C0:71:93:E7:4E:9C";
-                break;
-            case "2":
-                address.BTaddress = "CF:8E:09:65:A2:2A";
-                break;
-            case "3":
-                address.BTaddress = "CE:5F:E8:39:1B:7F";
-                break;
-            case "4":
-                address.BTaddress = "E0:D9:98:07:E5:26";
-                break;
-            case "5":
-                address.BTaddress = "E0:3F:F8:C2:E6:0E";
-                break;
-        }
-
-        //Debug.Log("블루투스주소 잘 들어갔나?" + address.BTaddress);
-
         if (Application.platform != RuntimePlatform.Android) return; 
         AndroidJavaClass androidJC = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject jo = androidJC.GetStatic<AndroidJavaObject>("currentActivity");
-
-        bool connected = false;
-
         if (jc != null)
         {
             javaClassInstance = jc.CallStatic<AndroidJavaObject>("instance");
             javaClassInstance.Call("setContext", jo);
-            connected = javaClassInstance.Call<bool>("reconnect", jo, address.BTaddress);
-            Debug.Log(connected);
+            javaClassInstance.Call<bool>("reconnect", jo, address.BTaddress);
             listening = true;
         }
 
-        
-        Debug.Log("#1.connected");
     }
-
 
     public void disconnect()
     {
@@ -138,11 +82,7 @@ public class aarcall : MonoBehaviour
             javaClassInstance.Call("service_end");
             listening = false;
         }
-
-        Debug.Log("#1.disconnected");
-
     }
-
 
     // Update is called once per frame
     void Update()
