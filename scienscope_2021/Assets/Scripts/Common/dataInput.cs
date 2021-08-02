@@ -23,7 +23,10 @@ public class dataInput : MonoBehaviour
             data_in.RemoveAt(0);
         }
 
-        if(tmp.Contains("rfT")) GameObject.Find("Debug_Data (1)").GetComponent<Text>().text = tmp;
+        if(tmp.Contains("rfT"))
+        {
+            return tmp;
+        }
 
         string[] segments = tmp.Split('!');
 

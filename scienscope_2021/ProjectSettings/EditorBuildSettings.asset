@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/1_play.unity
     guid: b82ee58ed8cf77d4b8da22c9d94838d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Human Organ System PBR/DemoScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/watch_test.unity
+    guid: 90b9686a5d45d084aad40f621268d407
   m_configObjects: {}
