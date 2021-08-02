@@ -24,6 +24,8 @@ public class camera_movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(use_gravity) Input.gyro.enabled = true;
+
         q = new float[4];
         f_raw_data = new float[5];
     }
@@ -60,14 +62,26 @@ public class camera_movement : MonoBehaviour
                     float angle = Quaternion.Angle((origin * rot), rig.rotation);
 
                     //raw_data.text = "" + angle+" "+rot;
-                    if (!originated)
+                    if (!originated && !use_gravity)
                     {
                         originated = true;
                         
                         origin = Quaternion.Inverse(rot);
                         //rotate_tester.rotation = rot *origin;
+                    }else if (use_gravity)
+                    {
+                        ///Gravity Indicator, Rotation///
+                        Vector3 gdir = Input.gyro.gravity;
+                        origin = Quaternion.EulerAngles(0, 0, -Mathf.Atan(gdir.y / gdir.x));
+                        
+                        if (gdir.x > 0) origin = origin * Quaternion.Euler(0, 0, -90);
+                        else origin = origin * Quaternion.Euler(0, 0, 90);
+                        Debug.Log(origin);
+
+                        origin = origin * Quaternion.Inverse(rot);
                     }
-                    else if (angle < 20)
+
+                    if (angle < 20)
                     {
                         //rotate_tester.rotation = origin * rot;
                         rig.rotation = (origin * rot);
@@ -83,24 +97,11 @@ public class camera_movement : MonoBehaviour
                     }
                     
                 }
-
-                //cam.transform.localRotation = Quaternion.Euler(0, 0, rig.localRotation.eulerAngles.z);
-                float angular_diff = rig.localEulerAngles.z - cam.transform.localEulerAngles.z;
-                if (angular_diff > 180)
-                {
-                    Debug.Log(rig.localEulerAngles.z + "   ///   " + cam.transform.localEulerAngles.z + "   " + angular_diff);
-                    rotate_smooth(new Vector3(0, 0, -360+angular_diff));
-                }else if (angular_diff < -180)
-                {
-                    Debug.Log(rig.localEulerAngles.z + "   ///   " + cam.transform.localEulerAngles.z + "   " + angular_diff);
-                    rotate_smooth(new Vector3(0, 0, -(360 + angular_diff)));
-                }
-                else rotate_smooth(new Vector3(0,0,rig.localEulerAngles.z - cam.transform.localEulerAngles.z));
-                //
-                //Debug.Log(Quaternion.Angle(rig.transform.localRotation, cam.transform.localRotation));
+                
+                rotate_smooth(new Vector3(0, 0, rig.localEulerAngles.z));
+               
                 delta = cam.transform.localRotation * delta;
                 move_smooth(delta);
-                //raw_data.text = "";
             }
             else if (income == "")
             {
@@ -119,6 +120,7 @@ public class camera_movement : MonoBehaviour
     void rotate_smooth(Vector3 delta_angle)
     {
         StartCoroutine("rotateSmooth", delta_angle);
+        
     }
 
     IEnumerator moveSmooth(Vector3 d)
@@ -132,11 +134,16 @@ public class camera_movement : MonoBehaviour
 
     IEnumerator rotateSmooth(Vector3 d)
     {
+        Quaternion start = cam.transform.localRotation;
+        Quaternion end = Quaternion.Euler(0, 0, d.z);
+        
         for (int i = 0; i < 3; i++)
         {
-            cam.transform.localRotation = cam.transform.localRotation * Quaternion.Euler(0, 0, d.z / 3f);
-            yield return new WaitForSeconds(0.018f/3f);
+            //cam.transform.localRotation = cam.transform.localRotation * Quaternion.Euler(0, 0, d.z / 3f);
+            cam.transform.localRotation = Quaternion.Slerp(start, end, (float)(1f / 3f * (i+1)));
+            //Debug.Log(end);
+            yield return new WaitForSeconds(0.01f);
         }
-        cam.transform.localEulerAngles = new Vector3(0,0,rig.localEulerAngles.z);
+        //cam.transform.localEulerAngles = new Vector3(0,0,rig.localEulerAngles.z);
     }
 }

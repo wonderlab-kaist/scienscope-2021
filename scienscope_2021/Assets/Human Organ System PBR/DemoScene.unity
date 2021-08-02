@@ -809,7 +809,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -817,23 +817,95 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.002
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -4.7216635
+      outSlope: -4.7216635
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0.8904506
+    - serializedVersion: 3
+      time: 0.01846724
+      value: 0.7763214
+      inSlope: -125.05016
+      outSlope: -125.05016
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.024275407
+      value: 0.5369415
+      inSlope: -31.26254
+      outSlope: -31.26254
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.034081668
+      value: 0.38537598
+      inSlope: -7.815635
+      outSlope: -7.815635
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.0482735
+      value: 0.25912476
+      inSlope: -1.9539088
+      outSlope: -1.9539088
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.073040836
+      value: 0.16674805
+      inSlope: -0.4884772
+      outSlope: -0.4884772
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.138849
+      value: 0.1378479
+      inSlope: -0.1221193
+      outSlope: -0.1221193
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.26323268
+      value: 0.111450195
+      inSlope: -0.26236594
+      outSlope: -0.26236594
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.37794566
+    - serializedVersion: 3
+      time: 0.5029363
+      value: 0.051727295
+      inSlope: -0.24057469
+      outSlope: -0.24057469
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.14488555
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.002
+      inSlope: -0.002000801
+      outSlope: -0.002000801
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -1174,6 +1246,11 @@ PrefabInstance:
       propertyPath: newsprite
       value: 
       objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6402122941289838925, guid: a11a62b43551f714ba9484f10da5a4a2,
+        type: 3}
+      propertyPath: default_ble_address
+      value: E2:39:AF:10:0A:73
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11a62b43551f714ba9484f10da5a4a2, type: 3}
 --- !u!1 &1114040580
@@ -1237,9 +1314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gain: 0.00002
   raw_data: {fileID: 177481153}
-  f_raw_data: []
   cam: {fileID: 963194227}
   rig: {fileID: 1114040581}
+  use_gravity: 1
 --- !u!4 &1155472696
 Transform:
   m_ObjectHideFlags: 0

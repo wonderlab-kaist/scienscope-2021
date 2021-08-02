@@ -200,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 127307141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 9.5}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -597,9 +597,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gain: 0.0007
   raw_data: {fileID: 1490464048}
-  f_raw_data: []
   cam: {fileID: 2036602476}
   rig: {fileID: 187614557}
+  use_gravity: 0
 --- !u!1 &1953244027
 GameObject:
   m_ObjectHideFlags: 0
