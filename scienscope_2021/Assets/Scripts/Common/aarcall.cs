@@ -10,6 +10,7 @@ public class aarcall : MonoBehaviour
     AndroidJavaClass jc;
 
     public Text deb;
+    public string default_ble_address;
 
     private AndroidJavaObject plugin;
     private bool listening = false;
@@ -24,7 +25,7 @@ public class aarcall : MonoBehaviour
         { "7f43df7cd3722a08c97180f49c7315ed", "CE:5F:E8:39:1B:7F" }, // Labeled "3"
         { "3f45d020fe1e68e46318065ccfe8c456", "D4:51:6E:11:D5:B9" },
         { "cceb48d01d5382b20e9a403c2f75ee76", "E0:D9:98:07:E5:26" }, // Labeled "4"
-        { "b2f388211244904efb04d657dce3855a", "E0:3F:F8:C2:E6:0E" }, // Labeled "5"
+        { "b2f388211244904efb04d657dce3855a", "E2:39:AF:10:0A:73" }, // Labeled "5"
     };
 
 
@@ -32,7 +33,11 @@ public class aarcall : MonoBehaviour
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         dataInput.initialize(); //datainput class
-        address.BTaddress = "E2:39:AF:10:0A:73"; // Default Bluetooth Address
+        if(default_ble_address != null)
+        {
+            address.BTaddress = default_ble_address; // Default Bluetooth Address
+        }
+        
         //mainBtn = GetComponent<GameObject>();
 
         if (Application.platform == RuntimePlatform.Android)
