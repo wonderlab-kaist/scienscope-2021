@@ -79,9 +79,9 @@ public class UIcontroller : MonoBehaviour
             plusBtn.SetActive(false);
             arrow.SetActive(false);
             headingTxt.SetActive(true);
-            //gif.SetActive(true);
-            animation.SetActive(true);
-            explainTxt.text = "전시물 내부를 보고 싶다면,"+"\n"+ "태그를 찾아 핸드폰을 갖다 대보세요";
+            gif.SetActive(true);
+            //animation.SetActive(true);
+            explainTxt.text = "전시물에 부착된 태그를 찾아"+"\n"+ "핸드폰을 갖다 대보세요";
 
         }
         else //연결실패
