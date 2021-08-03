@@ -78,7 +78,7 @@ public class camera_movement : MonoBehaviour
                         
                         if (gdir.x > 0) origin = origin * Quaternion.Euler(0, 0, -90);
                         else origin = origin * Quaternion.Euler(0, 0, 90);
-                        Debug.Log(origin);
+                        //Debug.Log(origin);
 
                         origin = origin * Quaternion.Inverse(rot);
                     }
