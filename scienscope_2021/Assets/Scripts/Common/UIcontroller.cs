@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class UIcontroller : MonoBehaviour
 {
@@ -23,6 +24,21 @@ public class UIcontroller : MonoBehaviour
 
 
     private bool connected = false; //연결상태확인
+
+    void Start()
+    {
+        if (address.BTaddress != "")
+        {
+            mainBtn.SetActive(false);
+            mainusBtn.SetActive(false);
+            plusBtn.SetActive(false);
+            arrow.SetActive(false);
+            headingTxt.SetActive(true);
+            gif.SetActive(true);
+            explainTxt.text = "전시물 내부를 보고 싶다면," + "\n" + "태그를 찾아 핸드폰을 갖다 대보세요";
+            GameObject.Find("BLEcontroller").GetComponent<aarcall>().setListening(true);
+        }
+    }
 
 
     public void ClickWhat() //plus minus Button
@@ -66,12 +82,12 @@ public class UIcontroller : MonoBehaviour
                 address.BTaddress = "E0:D9:98:07:E5:26";
                 break;
             case "5":
-                address.BTaddress = "E0:3F:F8:C2:E6:0E";
+                address.BTaddress = "E2:39:AF:10:0A:73";
                 connected = true;
                 break;
         }
         GameObject.Find("BLEcontroller").GetComponent<aarcall>().connect();
-
+        Debug.Log(dataInput.isConnected());
         if (connected) //연결성공
         {
             mainBtn.SetActive(false);
