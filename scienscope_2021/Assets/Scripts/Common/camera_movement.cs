@@ -11,7 +11,7 @@ public class camera_movement : MonoBehaviour
 
     public Text raw_data; //debugging text, monitoring raw data from module
     private float[] f_raw_data; //parsed raw-data
-    public Camera cam;
+    public Transform cam;
     public Transform rig;
     public bool use_gravity; // checking for calibrating by gravity from mobile device data
 
@@ -78,7 +78,7 @@ public class camera_movement : MonoBehaviour
                         
                         if (gdir.x > 0) origin = origin * Quaternion.Euler(0, 0, -90);
                         else origin = origin * Quaternion.Euler(0, 0, 90);
-                        Debug.Log(origin);
+                        //Debug.Log(origin);
 
                         origin = origin * Quaternion.Inverse(rot);
                     }
@@ -102,9 +102,9 @@ public class camera_movement : MonoBehaviour
                 
                 rotate_smooth(new Vector3(0, 0, rig.localEulerAngles.z));
                
-                delta = cam.transform.localRotation * delta;
+                delta = cam.localRotation * delta;
                 move_smooth(delta);
-            }else if (data.Length <= 2)
+            }else if (data.Length < 2)
             {
                 int distance = int.Parse(data[0]);
 
@@ -134,23 +134,23 @@ public class camera_movement : MonoBehaviour
     {
         for(int i = 0; i < 3; i++)
         {
-            cam.transform.position -= d / 3f;
+            cam.position -= d / 3f;
             yield return new WaitForSeconds(0.02f/3f);
         }
     }
 
     IEnumerator rotateSmooth(Vector3 d)
     {
-        Quaternion start = cam.transform.localRotation;
+        Quaternion start = cam.localRotation;
         Quaternion end = Quaternion.Euler(0, 0, d.z);
         
         for (int i = 0; i < 3; i++)
         {
             //cam.transform.localRotation = cam.transform.localRotation * Quaternion.Euler(0, 0, d.z / 3f);
-            cam.transform.localRotation = Quaternion.Slerp(start, end, (float)(1f / 3f * (i+1)));
-            //Debug.Log(end);
+            cam.localRotation = Quaternion.Slerp(start, end, (float)(1f / 3f * (i+1)));
+            
             yield return new WaitForSeconds(0.01f);
         }
-        //cam.transform.localEulerAngles = new Vector3(0,0,rig.localEulerAngles.z);
+
     }
 }
