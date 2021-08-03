@@ -8,16 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/0_start.unity
     guid: 0f581a67f8826f34f87dc61471815a02
   - enabled: 0
     path: Assets/Scenes/1_play.unity
     guid: b82ee58ed8cf77d4b8da22c9d94838d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Human Organ System PBR/DemoScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: Assets/Scenes/watch_test.unity
+  - enabled: 1
+    path: Assets/Scenes/0_watch_start.unity
+    guid: e10946a9a3a65a5458f92fec8553055b
+  - enabled: 1
+    path: Assets/Scenes/1_watch_rock.unity
     guid: 90b9686a5d45d084aad40f621268d407
   m_configObjects: {}
