@@ -22,8 +22,14 @@ public class TAG_loading : MonoBehaviour
         string tmp = dataInput.getData();
         if(tmp!=null&&Application.platform == RuntimePlatform.Android)
         {
-            if (tmp.Split(':')[0] == "R")
+            heading.text = tmp;
+            if (tmp.Contains("rfT")&&tmp.Contains("rfID:B06DE832"))
             {
+
+                //heading.text = "전시물 안으로 가는중";
+                explain.text = "잠시만 기다려주세요...";
+                
+                SceneManager.LoadScene(1, LoadSceneMode.Single);
                 address.SetLastRFID(tmp.Split(':')[1]);
 
             }
@@ -35,7 +41,7 @@ public class TAG_loading : MonoBehaviour
             heading.text = "전시물 안으로 가는중";
             explain.text = "잠시만 기다려주세요...";
             //씬전환
-            SceneManager.LoadScene("1_play");
+            
         }
     }
 }

@@ -12,6 +12,7 @@ public class UIcontroller : MonoBehaviour
     public GameObject headingTxt;
     public GameObject arrow;
     public GameObject gif;
+    public GameObject animation;
 
     public Sprite normalSprite;
     public Sprite errorSprite; 
@@ -78,7 +79,8 @@ public class UIcontroller : MonoBehaviour
             plusBtn.SetActive(false);
             arrow.SetActive(false);
             headingTxt.SetActive(true);
-            gif.SetActive(true);
+            //gif.SetActive(true);
+            animation.SetActive(true);
             explainTxt.text = "전시물 내부를 보고 싶다면,"+"\n"+ "태그를 찾아 핸드폰을 갖다 대보세요";
 
         }
@@ -86,7 +88,7 @@ public class UIcontroller : MonoBehaviour
         {
             mainBtn.GetComponent<Image>().sprite = errorSprite;
             mainTxt.GetComponent<Text>().text = "";
-            Invoke("HideImage", 2);
+            Invoke("HideImage", 1);
         }
     }
 
