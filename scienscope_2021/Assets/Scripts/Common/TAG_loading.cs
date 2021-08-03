@@ -23,7 +23,8 @@ public class TAG_loading : MonoBehaviour
         if(tmp!=null&&Application.platform == RuntimePlatform.Android)
         {
             heading.text = tmp;
-            if (tmp.Contains("rfT")&&tmp.Contains("rfID:B06DE832"))
+            Debug.Log(tmp);
+            if (tmp.Contains("rfT")&&tmp.Contains("rfID:8D8432F5"))
             {
 
                 //heading.text = "전시물 안으로 가는중";
