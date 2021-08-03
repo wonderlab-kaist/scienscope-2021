@@ -7,6 +7,7 @@ public class dataInput : MonoBehaviour
 {
     public static List<string> data_in;
     public static string tmp;
+    
 
     public static void initialize()
     {
@@ -39,6 +40,12 @@ public class dataInput : MonoBehaviour
         return segments[0];
         
         
+    }
+
+    public static bool isConnected()
+    {
+        if (data_in != null && data_in.Count > 0) return true;
+        else return false;
     }
 
 }
