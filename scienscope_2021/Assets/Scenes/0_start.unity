@@ -185,8 +185,8 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
-  m_MinParticleSize: 1.3
-  m_MaxParticleSize: 1.3
+  m_MinParticleSize: 1
+  m_MaxParticleSize: 1
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -217,7 +217,7 @@ ParticleSystem:
   m_GameObject: {fileID: 18370639}
   serializedVersion: 7
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 0.6
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -1648,8 +1648,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 4
-    tilesY: 3
+    tilesX: 3
+    tilesY: 7
     animationType: 0
     rowIndex: 0
     cycles: 1
