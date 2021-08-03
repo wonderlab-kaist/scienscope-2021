@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class camera_movement : MonoBehaviour
@@ -20,6 +21,7 @@ public class camera_movement : MonoBehaviour
     private Quaternion origin;
     private bool originated = false;
     private int reset_count = 0;
+    private int goback_count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -102,6 +104,11 @@ public class camera_movement : MonoBehaviour
                
                 delta = cam.transform.localRotation * delta;
                 move_smooth(delta);
+            }else if (data.Length <= 2)
+            {
+                int distance = int.Parse(data[0]);
+
+                if (distance > 100) SceneManager.LoadScene(0, LoadSceneMode.Single);
             }
             else if (income == "")
             {
