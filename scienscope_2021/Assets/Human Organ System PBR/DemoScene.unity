@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 118216612}
   - component: {fileID: 118216611}
   m_Layer: 5
-  m_Name: Reconnect
+  m_Name: Reconnect _ button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1724,7 +1724,7 @@ GameObject:
   - component: {fileID: 1520742377}
   - component: {fileID: 1520742376}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Scienscope_3D_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

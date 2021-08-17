@@ -15,8 +15,8 @@ public class sizeController : MonoBehaviour
         myCanvas = myGO.GetComponent<Canvas>();
         canvasSize = myCanvas.renderingDisplaySize;
 
-        Debug.Log(myCanvas);
-        Debug.Log(myCanvas.renderingDisplaySize);
+        //Debug.Log(myCanvas);
+        //Debug.Log(myCanvas.renderingDisplaySize);
 
 
 

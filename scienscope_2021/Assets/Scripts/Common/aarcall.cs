@@ -96,11 +96,7 @@ public class aarcall : MonoBehaviour
         {
             string tmp;
             tmp = javaClassInstance.Call<string>("getData");
-            /*if (tmp.Split(':')[0] == "R")
-            {
-                deb.text = "태그인식완료";
-            }*/
-
+            //Debug.Log(tmp);
             dataInput.data_in.Add(tmp); //List에 data입력 시작
         }
     }
