@@ -16,12 +16,16 @@ public class dataInput : MonoBehaviour
 
     public static string getData()
     {
-        
+        tmp = "";
+
         if (data_in.Count > 0)
         {
-            tmp = "";
+            
             tmp += data_in[0];
             data_in.RemoveAt(0);
+        }else if(data_in.Count==0)
+        {
+            return null;
         }
 
         if(tmp.Contains("rfT"))
@@ -36,7 +40,7 @@ public class dataInput : MonoBehaviour
             for (int i = segments.Length - 1; i > 0; i--) data_in.Insert(0, segments[i]);
             GameObject.Find("Debug_Data (1)").GetComponent<Text>().text = tmp.Split('!')[1];
         }*/
-
+        //Debug.Log(segments.Length);
         return segments[0];
         
         
