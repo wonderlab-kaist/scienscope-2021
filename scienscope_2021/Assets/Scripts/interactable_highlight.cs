@@ -13,11 +13,14 @@ public class interactable_highlight : MonoBehaviour
     /// this script temporary for the heart prefab
     /// </summary>
     float duration;
+    bool guide_played = false;
     long[] beat = { 400, 600 };
 
     void Start()
     {
+        
         viewer_aim = GameObject.Find("viewer_outer_ring"); // outer ring should be this name "viewer_outer_ring"
+        
     }
 
     // Update is called once per frame
@@ -28,15 +31,19 @@ public class interactable_highlight : MonoBehaviour
         Vector3 proj_aim = new Vector3(viewer_aim.transform.position.x, viewer_aim.transform.position.y, 0);
 
         float d = Vector3.Distance(proj_this, proj_aim);
-
+        Debug.Log(d);
         if (d < radius) highlighted();
         else
         {
             this.GetComponent<Outline>().OutlineWidth = 0f;
-            this.GetComponent<AudioSource>().volume *= 0.98f;
-            GameObject.Find("Explanation").GetComponent<Text>().text = "우리 몸의 내부는 \n 어떻게 생겼을까요?";
-            GameObject.Find("Explanation Detailed").GetComponent<Text>().text = " ";
-
+            guide_played = false;
+            if (this.gameObject.name == "heart animated prefab")
+            {
+                this.GetComponent<AudioSource>().volume *= 0.98f;
+                GameObject.Find("Explanation").GetComponent<Text>().text = "우리 몸의 내부는 \n 어떻게 생겼을까요?";
+                GameObject.Find("Explanation Detailed").GetComponent<Text>().text = " ";
+                
+            }
         }
     }
 
@@ -59,7 +66,21 @@ public class interactable_highlight : MonoBehaviour
             {
                 duration += Time.deltaTime * 1000;
             }
+
+            if (!guide_played)
+            {
+                GameObject.Find("guide_sound").GetComponent<AudioSource>().Play();
+                guide_played = true;
+            }
             
+        }else if(this.gameObject.name == "Crystal")
+        {
+            this.GetComponent<Outline>().OutlineWidth = 15f;
+            if (!guide_played)
+            {
+                this.GetComponent<AudioSource>().Play();
+                guide_played = true;
+            }
         }
 
 
