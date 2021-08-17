@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd7dc4fa634bc84db863939b20c06c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gain: 0.00004
+  gain: 0.00001
   raw_data: {fileID: 1364456355}
   cam: {fileID: 2079936997}
   rig: {fileID: 224472066}
