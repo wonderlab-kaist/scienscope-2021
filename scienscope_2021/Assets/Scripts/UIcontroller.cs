@@ -22,6 +22,8 @@ public class UIcontroller : MonoBehaviour
     public Text explainTxt;
 
 
+    public string[] address_BLE;
+
 
     private bool connected = false; //연결상태확인
 
@@ -68,7 +70,7 @@ public class UIcontroller : MonoBehaviour
     public void mainBtnPush()
     {
         
-        switch (mainTxt.GetComponent<Text>().text)
+        /*switch (mainTxt.GetComponent<Text>().text)
         {
             case "1":
                 address.BTaddress = "C0:71:93:E7:4E:9C";
@@ -86,11 +88,18 @@ public class UIcontroller : MonoBehaviour
                 address.BTaddress = "E2:39:AF:10:0A:73";
                 connected = true;
                 break;
-        }
+        }*/
+
+        address.BTaddress = address_BLE[int.Parse(mainTxt.GetComponent<Text>().text)];
+        connected = true;
+
         GameObject.Find("BLEcontroller").GetComponent<aarcall>().connect();
         Debug.Log(dataInput.isConnected());
+
         if (connected) //연결성공
         {
+            SceneManager.LoadScene("1_RFID_waiting", LoadSceneMode.Single); ///// Move on to RFID waiting scene
+
             mainBtn.SetActive(false);
             mainusBtn.SetActive(false);
             plusBtn.SetActive(false);

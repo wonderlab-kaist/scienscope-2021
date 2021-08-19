@@ -7,6 +7,8 @@ public static class address
     public static string BTaddress = "";
     private static string lastRFID = "10006E682731";
     //public static GameObject aimed_object;
+    
+
 
     public static Dictionary<string, int[]> RFID_numbers = new Dictionary<string, int[]>
     {   //Dictionary 자료구조. 태그값
