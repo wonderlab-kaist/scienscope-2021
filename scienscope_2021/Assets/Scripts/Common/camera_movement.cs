@@ -39,7 +39,7 @@ public class camera_movement : MonoBehaviour
         string income = dataInput.getData();
         //Debug.Log(income);
         if (income != "" && raw_data != null) raw_data.text = income;
-        if (income != "")
+        if (income != "" && income != null)
         {
             string[] data = income.Split(' ');
 
@@ -90,7 +90,7 @@ public class camera_movement : MonoBehaviour
                         reset_count++;
                     }
 
-                    if(reset_count > 50)
+                    if(Time.timeSinceLevelLoad < 0.1f || reset_count > 50)
                     {
                         rig.rotation = (origin * rot);
                         reset_count = 0;
@@ -107,7 +107,8 @@ public class camera_movement : MonoBehaviour
                 int distance;
                 if(int.TryParse(data[0], out distance))
                 {
-                    if (distance > 100) SceneManager.LoadScene(0, LoadSceneMode.Single); /// go back to rfid waiting scene...
+                    Debug.Log(distance + " LOAD SCENE AGAIN");
+                    if (distance > 100 && distance < 256) SceneManager.LoadScene("1_RFID_waiting", LoadSceneMode.Single); /// go back to rfid waiting scene...
                 }else if (data[0].Contains("bat"))
                 {
                     Debug.Log("battery: " + data[0].Split(':')[1]);
