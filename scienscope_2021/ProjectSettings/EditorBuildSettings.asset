@@ -5,25 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/0_start.unity
     guid: 0f581a67f8826f34f87dc61471815a02
-  - enabled: 0
-    path: Assets/Scenes/1_play.unity
-    guid: b82ee58ed8cf77d4b8da22c9d94838d3
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/1_RFID_waiting.unity
+    guid: ac6878f61ba08a946a6ff7e8086f8c98
+  - enabled: 1
     path: Assets/Human Organ System PBR/DemoScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/0_watch_start.unity
+    path: Assets/Scenes/Scenes_for_SmartWatch/0_watch_start.unity
     guid: e10946a9a3a65a5458f92fec8553055b
   - enabled: 0
-    path: Assets/Scenes/1_watch_rock.unity
+    path: Assets/Scenes/Scenes_for_SmartWatch/1_watch_rock.unity
     guid: 90b9686a5d45d084aad40f621268d407
-  - enabled: 1
+  - enabled: 0
     path: Assets/template_scene.unity
     guid: 1f013b3ee419c8241ae6bd40b0dfe6ac
   m_configObjects: {}

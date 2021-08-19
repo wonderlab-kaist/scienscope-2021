@@ -33,11 +33,13 @@ public class aarcall : MonoBehaviour
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         dataInput.initialize(); //datainput class
-        if(default_ble_address != null)
+        Debug.Log("#1." + address.BTaddress);
+
+        if (default_ble_address != "")
         {
             address.BTaddress = default_ble_address; // Default Bluetooth Address
         }
-        
+        Debug.Log("#1---." + address.BTaddress);
         //mainBtn = GetComponent<GameObject>();
 
         if (Application.platform == RuntimePlatform.Android)
