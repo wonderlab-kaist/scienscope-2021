@@ -36,14 +36,14 @@ public class TAG_loading : MonoBehaviour
         {
             heading.text = tmp;
             //Debug.Log(tmp);
-            if (tmp.Contains("rfT"))
+            if (tmp.Contains("rfID"))
             {
                 explain.text = "잠시만 기다려주세요...";
-                
+                Debug.Log(tmp);
                 /// move on contents scenes ///
                 for(int i = 0; i < RFID_address.Length; i++)
                 {
-                    if(tmp.Contains(RFID_address[i])) SceneManager.LoadScene("DemoScene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                    if(tmp.Contains(RFID_address[i])) SceneManager.LoadSceneAsync("DemoScene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
                     
                 }
             }
