@@ -59,6 +59,8 @@ public class aarcall : MonoBehaviour
             }
         }
         Debug.Log("#1.aarcall start");
+
+        StartCoroutine("streaming_data");
     }
     
 
@@ -94,12 +96,23 @@ public class aarcall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (listening && Application.platform == RuntimePlatform.Android) 
+        
+        
+    }
+
+    IEnumerator streaming_data()
+    {
+        while (true)
         {
-            string tmp;
-            tmp = javaClassInstance.Call<string>("getData");
-            //Debug.Log(tmp);
-            dataInput.data_in.Add(tmp); //List에 data입력 시작
+            if (listening && Application.platform == RuntimePlatform.Android)
+            {
+                string tmp;
+                tmp = javaClassInstance.Call<string>("getData");
+                Debug.Log(tmp);
+                dataInput.data_in.Add(tmp); //List에 data입력 시작
+                                            //deb.text = tmp;
+            }
+            yield return new WaitForSeconds(0.015f);
         }
     }
 

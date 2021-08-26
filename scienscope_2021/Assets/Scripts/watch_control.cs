@@ -24,7 +24,7 @@ public class watch_control : MonoBehaviour
         {
             if(!connected && dataInput.data_in.Count < 2)
             {
-                BLEcontroller.connect();
+                //BLEcontroller.connect();
 
             }
             else
