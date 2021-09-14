@@ -34,7 +34,7 @@ public class watch_control : MonoBehaviour
                 string tmp = dataInput.getData();
                 if(tmp != "") Debug.Log(tmp);
 
-                if (tmp.Contains("3B971EAD")) SceneManager.LoadScene(1, LoadSceneMode.Single);
+                if (tmp.Contains("rfID")) SceneManager.LoadScene(1, LoadSceneMode.Single);
             }
         }
 

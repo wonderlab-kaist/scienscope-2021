@@ -69,8 +69,8 @@ public class interactable_highlight : MonoBehaviour
 
             if (!guide_played)
             {
-                //GameObject.Find("guide_sound").GetComponent<AudioSource>().Play();
-                //guide_played = true;
+                GameObject.Find("guide_sound").GetComponent<AudioSource>().Play();
+                guide_played = true;
             }
             
         }else if(this.gameObject.name == "Crystal")
