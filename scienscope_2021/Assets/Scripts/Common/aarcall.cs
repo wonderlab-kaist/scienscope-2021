@@ -108,7 +108,7 @@ public class aarcall : MonoBehaviour
             {
                 string tmp;
                 tmp = javaClassInstance.Call<string>("getData");
-                Debug.Log(tmp);
+                //Debug.Log(tmp);
                 dataInput.data_in.Add(tmp); //List에 data입력 시작
                                             //deb.text = tmp;
             }
