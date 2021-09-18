@@ -32,7 +32,7 @@ public class dataInput : MonoBehaviour
         {
             //tmp.IndexOf("rfT");
             Debug.Log(tmp);
-            if(tmp.Split('D')[1].Length < 8)
+            if(tmp.Split(':').Length>2 && tmp.Split(':')[2].Length < 8)
             {
                 //Debug.Log(tmp.Split('D')[1].Length);
                 tmp += data_in[0];
