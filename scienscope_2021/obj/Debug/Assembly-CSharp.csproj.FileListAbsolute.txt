@@ -276,3 +276,6 @@ C:\Users\yeeun\Downloads\▶2021 대학원\프로젝트-과학청진기\sciensco
 C:\Users\yeeun\Downloads\▶2021 대학원\프로젝트-과학청진기\scienscope-2021-main\scienscope_2021\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\yeeun\Downloads\▶2021 대학원\프로젝트-과학청진기\scienscope-2021-main\scienscope_2021\obj\Debug\Assembly-CSharp.dll
 C:\Users\yeeun\Downloads\▶2021 대학원\프로젝트-과학청진기\scienscope-2021-main\scienscope_2021\obj\Debug\Assembly-CSharp.pdb
+F:\2021\scienscope_2021\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+F:\2021\scienscope_2021\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+F:\2021\scienscope_2021\obj\Debug\Assembly-CSharp.dll

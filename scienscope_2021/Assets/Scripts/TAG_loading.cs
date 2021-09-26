@@ -28,24 +28,22 @@ public class TAG_loading : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        string tmp = dataInput.getData();
+        stethoscope_data tmp = new stethoscope_data(dataInput.getData());
+        //string tmp = dataInput.getData();
         //Debug.Log(address.BTaddress);
 
         if (tmp!=null&&Application.platform == RuntimePlatform.Android)
         {
-            heading.text = tmp;
+            heading.text = "rea";
             //Debug.Log(tmp);
-            if (tmp.Contains("rfID"))
+            if (!(tmp.tag_id[0] == 0&& tmp.tag_id[1] == 0&& tmp.tag_id[2] == 0&& tmp.tag_id[3] == 0))
             {
                 explain.text = "잠시만 기다려주세요...";
                 Debug.Log(tmp);
                 /// move on contents scenes ///
-                for(int i = 0; i < RFID_address.Length; i++)
-                {
-                    if(tmp.Contains(RFID_address[i])) SceneManager.LoadSceneAsync("DemoScene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                SceneManager.LoadSceneAsync("DemoScene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
                     
-                }
+                
             }
         }
 
