@@ -21,11 +21,12 @@ public class stethoscope_data
 
     public stethoscope_data(byte[] data_in)
     {
+        if (data_in == null) return;
         q = new int[3];
         tag_id = new byte[4];
         union_float uf;
         union_int ui;
-
+        
         ui.i = 0;
         ui.b0 = data_in[0];
         ui.b1 = data_in[1];
