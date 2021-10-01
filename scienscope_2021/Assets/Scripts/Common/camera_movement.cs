@@ -66,7 +66,12 @@ public class camera_movement : MonoBehaviour
 
                 }
                 //Displacement values
-                Vector3 delta = new Vector3(-f_raw_data[4], f_raw_data[3], 0);
+                float x = -f_raw_data[4];
+                float y = f_raw_data[3];
+                if(Mathf.Abs(x) < 250) x = 0f;
+                if(Mathf.Abs(y) < 250) y = 0f;
+                
+                Vector3 delta = new Vector3(x, y, 0);
 
                 //Quaternion for ratation
                 for (int i = 0; i < 3; i++) q[i + 1] = f_raw_data[i] / 1073741824f;
