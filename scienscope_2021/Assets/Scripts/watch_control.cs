@@ -31,10 +31,10 @@ public class watch_control : MonoBehaviour
             {
                 connected = true;
 
-                string tmp = dataInput.getData();
-                if(tmp != "") Debug.Log(tmp);
+                //string tmp = dataInput.getData();
+                //if(tmp != "") Debug.Log(tmp);
 
-                if (tmp.Contains("rfID")) SceneManager.LoadScene(1, LoadSceneMode.Single);
+                //if (tmp.Contains("rfID")) SceneManager.LoadScene(1, LoadSceneMode.Single);
             }
         }
 

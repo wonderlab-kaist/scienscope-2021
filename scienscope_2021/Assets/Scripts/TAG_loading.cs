@@ -18,7 +18,7 @@ public class TAG_loading : MonoBehaviour
 
     public string[] RFID_address;
 
-
+    private bool scene_detected = false;
     
     void Start()
     {
@@ -28,34 +28,26 @@ public class TAG_loading : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        string tmp = dataInput.getData();
-        //Debug.Log(address.BTaddress);
+        stethoscope_data tmp = new stethoscope_data(dataInput.getData());
 
         if (tmp!=null&&Application.platform == RuntimePlatform.Android)
         {
-            heading.text = tmp;
+            heading.text = "rea";
             //Debug.Log(tmp);
-            if (tmp.Contains("rfID"))
+            if (!(tmp.tag_id[0] == 0&& tmp.tag_id[1] == 0&& tmp.tag_id[2] == 0&& tmp.tag_id[3] == 0) && !scene_detected)
             {
                 explain.text = "잠시만 기다려주세요...";
-                Debug.Log(tmp);
+                Debug.Log(System.BitConverter.ToString(tmp.tag_id).Replace("-",""));
+
+                //Debug.Log(tmp.tag_id[0].ToString('X2'));
                 /// move on contents scenes ///
-                for(int i = 0; i < RFID_address.Length; i++)
-                {
-                    if(tmp.Contains(RFID_address[i])) SceneManager.LoadSceneAsync("DemoScene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
-                    
-                }
+                scene_detected = true;
+                SceneManager.LoadSceneAsync("vc_test_scene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                
+                
             }
         }
 
-        /*int target_scene_num = address.GetCurrentSceneNumber();//현재씬번호 받아오기
-        if (target_scene_num != -1) //에러값이 아니면
-        {
-            heading.text = "전시물 안으로 가는중";
-            explain.text = "잠시만 기다려주세요...";
-            //씬전환
-            
-        }*/
+        
     }
 }
