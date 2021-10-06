@@ -293,17 +293,17 @@ PrefabInstance:
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
       propertyPath: RFID_address.Array.data[0]
-      value: CB2F27AD
+      value: ADD730F5
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
       propertyPath: RFID_address.Array.data[1]
-      value: BDF231F5
+      value: 3B971EAD
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
       propertyPath: RFID_address.Array.data[2]
-      value: 4B1C20AD
+      value: 8D8432F5
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
@@ -313,12 +313,12 @@ PrefabInstance:
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
       propertyPath: RFID_address.Array.data[4]
-      value: 24DD49D
+      value: B06DE832
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
       propertyPath: RFID_address.Array.data[5]
-      value: FD2F31F5
+      value: ADD730F5
       objectReference: {fileID: 0}
     - target: {fileID: 8851066768334554599, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
@@ -459,6 +459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: unplugged
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402122941289838925, guid: a11a62b43551f714ba9484f10da5a4a2,
+        type: 3}
+      propertyPath: default_ble_address
+      value: C3:EF:4B:B7:7C:20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11a62b43551f714ba9484f10da5a4a2, type: 3}

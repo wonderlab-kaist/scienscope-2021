@@ -15,7 +15,6 @@ public class aarcall : MonoBehaviour
     private AndroidJavaObject plugin;
     private bool listening = false;
 
-
     public readonly Dictionary<string, string> BTAdresses = new Dictionary<string, string>
     {
         // Order does not matter
@@ -59,6 +58,8 @@ public class aarcall : MonoBehaviour
             }
         }
         Debug.Log("#1.aarcall start");
+
+        StartCoroutine("streaming_data");
     }
     
 
@@ -94,12 +95,44 @@ public class aarcall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (listening && Application.platform == RuntimePlatform.Android) 
+        
+        
+    }
+
+    IEnumerator streaming_data()
+    {
+        while (true)
         {
-            string tmp;
-            tmp = javaClassInstance.Call<string>("getData");
-            //Debug.Log(tmp);
-            dataInput.data_in.Add(tmp); //List에 data입력 시작
+            if (listening && Application.platform == RuntimePlatform.Android)
+            {
+                //string tmp;
+                byte[] data_tmp;
+                
+                //tmp = javaClassInstance.Call<string>("getData");
+                data_tmp = javaClassInstance.Call<byte[]>("getByteData");
+                //Debug.Log(data_tmp.Length);
+                if (data_tmp == null) Debug.Log("non-data");
+                else
+                {
+                    //Debug.Log(data_tmp.Length);
+
+                    /*byte[] b = new byte[4];
+                    for (int i = 0; i < 4; i++) b[i] = data_tmp[i+16];
+                    union_float uf;
+                    uf.f = 0f;
+                    uf.b0 = b[0];
+                    uf.b1 = b[1];
+                    uf.b2 = b[2];
+                    uf.b3 = b[3];*/
+                    
+                    //Debug.Log(uf.f);
+                    //Debug.Log((data_tmp[40] == (byte)('\n')));
+                }
+                //Debug.Log(tmp);
+                dataInput.data_in.Add(data_tmp); //List에 data입력 시작
+                //deb.text = tmp;
+            }
+            yield return new WaitForSeconds(0.015f);
         }
     }
 

@@ -24,17 +24,17 @@ public class watch_control : MonoBehaviour
         {
             if(!connected && dataInput.data_in.Count < 2)
             {
-                BLEcontroller.connect();
+                //BLEcontroller.connect();
 
             }
             else
             {
                 connected = true;
 
-                string tmp = dataInput.getData();
-                if(tmp != "") Debug.Log(tmp);
+                //string tmp = dataInput.getData();
+                //if(tmp != "") Debug.Log(tmp);
 
-                if (tmp.Contains("3B971EAD")) SceneManager.LoadScene(1, LoadSceneMode.Single);
+                //if (tmp.Contains("rfID")) SceneManager.LoadScene(1, LoadSceneMode.Single);
             }
         }
 

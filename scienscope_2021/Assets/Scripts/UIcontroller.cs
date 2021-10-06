@@ -70,7 +70,7 @@ public class UIcontroller : MonoBehaviour
     public void mainBtnPush()
     {
         
-        /*switch (mainTxt.GetComponent<Text>().text)
+       /* switch (mainTxt.GetComponent<Text>().text)
         {
             case "1":
                 address.BTaddress = "C0:71:93:E7:4E:9C";

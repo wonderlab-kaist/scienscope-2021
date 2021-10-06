@@ -5,44 +5,47 @@ using UnityEngine.UI;
 
 public class dataInput : MonoBehaviour
 {
-    public static List<string> data_in;
-    public static string tmp;
+    public static List<byte[]> data_in;
+    public static byte[] tmp;
     
 
     public static void initialize()
     {
-        data_in = new List<string>();
+        data_in = new List<byte[]>();
     }
 
-    public static string getData()
+    public static byte[] getData()
     {
-        tmp = "";
-
         if (data_in.Count > 0)
         {
             
-            tmp += data_in[0];
+            tmp = data_in[0];
             data_in.RemoveAt(0);
+
         }else if(data_in.Count==0)
         {
             return null;
         }
+        //Debug.Log(tmp);
 
-        if(tmp.Contains("rfT"))
+        /*if (tmp.Contains("rfID"))
         {
+            //tmp.IndexOf("rfT");
+            
+            if(tmp.Split(':').Length>2 && tmp.Split(':')[2].Length < 8)
+            {
+                //Debug.Log(tmp.Split('D')[1].Length);
+                tmp += data_in[0];
+                Debug.Log(tmp);
+                data_in.RemoveAt(0);
+            }
+
             return tmp;
         }
 
-        string[] segments = tmp.Split('!');
+        string[] segments = tmp.Split('!');*/
 
-        /*if (segments.Length > 2)
-        {
-            for (int i = segments.Length - 1; i > 0; i--) data_in.Insert(0, segments[i]);
-            GameObject.Find("Debug_Data (1)").GetComponent<Text>().text = tmp.Split('!')[1];
-        }*/
-        //Debug.Log(segments.Length);
-        return segments[0];
-        
+        return tmp;
         
     }
 
@@ -51,5 +54,4 @@ public class dataInput : MonoBehaviour
         if (data_in != null && data_in.Count > 0) return true;
         else return false;
     }
-
 }

@@ -394,7 +394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1431}
+  m_AnchoredPosition: {x: 0, y: 286}
   m_SizeDelta: {x: 1600, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348480238
@@ -419,7 +419,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: cf5d2ab97ce47e7498b14aa4af62daaf, type: 3}
-    m_FontSize: 241
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -794,7 +794,7 @@ PrefabInstance:
     - target: {fileID: 6402122941289838925, guid: a11a62b43551f714ba9484f10da5a4a2,
         type: 3}
       propertyPath: default_ble_address
-      value: C4:3A:01:2E:C6:F9
+      value: F8:D8:39:47:6D:E4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11a62b43551f714ba9484f10da5a4a2, type: 3}

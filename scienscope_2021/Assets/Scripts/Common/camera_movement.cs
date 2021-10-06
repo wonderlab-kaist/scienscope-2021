@@ -9,10 +9,14 @@ public class camera_movement : MonoBehaviour
 {
     public float gain;
 
+    float movement_threshold = 200;
+    float distance_threshold = 100;
+
     public Text raw_data; //debugging text, monitoring raw data from module
-    private float[] f_raw_data; //parsed raw-data
+    private stethoscope_data data;
     public Transform cam;
     public Transform rig;
+    public bool isthisWatch;
     public bool use_gravity; // checking for calibrating by gravity from mobile device data
 
     //public Transform rotate_tester;
@@ -27,97 +31,109 @@ public class camera_movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(use_gravity) Input.gyro.enabled = true;
+        if (use_gravity)
+        {
+            Input.gyro.enabled = true;
+            Vector3 gdir = Input.gyro.gravity;
+            origin = Quaternion.EulerAngles(0, 0, -Mathf.Atan(gdir.y / gdir.x));
+
+            if (gdir.x > 0) origin = origin * Quaternion.Euler(0, 0, -90);
+            else origin = origin * Quaternion.Euler(0, 0, 90);
+
+            rig.rotation = (origin);
+            cam.localRotation = Quaternion.Euler(new Vector3(0, 0, rig.localEulerAngles.z));
+        }
 
         q = new float[4];
-        f_raw_data = new float[5];
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        string income = dataInput.getData();
-        //Debug.Log(income);
-        if (income != "" && raw_data != null) raw_data.text = income;
-        if (income != "" && income != null)
+        byte[] income = dataInput.getData();
+
+        if (income != null && income != null)
         {
-            string[] data = income.Split(' ');
+            //string[] data = income.Split(' ');
+            data = new stethoscope_data(income);
+            string monitoring = "";
+            monitoring += data.q[0] + " " + data.q[1] + " " + data.q[2];
+            monitoring += " "+data.distance;
+            monitoring += " " + data.mouse_x+ " "+ data.mouse_y;
+            Debug.Log(monitoring);
 
-            if (data.Length == 5)
+            if (data.distance <= distance_threshold)
             {
-                //Parsing all values into floats
-                for(int i = 0; i < 5; i++)
-                {
-                    if (float.TryParse(data[i], out f_raw_data[i])) continue;
-                    else continue;
-
-                }
                 //Displacement values
-                Vector3 delta = new Vector3(-f_raw_data[4], f_raw_data[3], 0);
+                float x = 0;
+                float y=0;
+                if (Mathf.Abs(data.mouse_x) > movement_threshold) x = data.mouse_x;
+                if (Mathf.Abs(data.mouse_y) > movement_threshold) y = data.mouse_y;
+                Vector3 delta = new Vector3(-y, x, 0);
 
                 //Quaternion for ratation
-                for (int i = 0; i < 3; i++) q[i + 1] = f_raw_data[i] / 1073741824f;
+                for (int i = 0; i < 3; i++) q[i + 1] = data.q[i] / 1073741824f;
 
-                if(1 - Mathf.Pow(q[1], 2) - Mathf.Pow(q[2], 2) - Mathf.Pow(q[3], 2) > 0 && Mathf.Abs(q[1])<1 && Mathf.Abs(q[2]) < 1 && Mathf.Abs(q[3]) < 1)
+                if (1 - Mathf.Pow(q[1], 2) - Mathf.Pow(q[2], 2) - Mathf.Pow(q[3], 2) > 0 && Mathf.Abs(q[1]) < 1 && Mathf.Abs(q[2]) < 1 && Mathf.Abs(q[3]) < 1)
                 {
                     q[0] = Mathf.Sqrt(1 - Mathf.Pow(q[1], 2) - Mathf.Pow(q[2], 2) - Mathf.Pow(q[3], 2));
                     Quaternion rot = new Quaternion(q[2], -q[1], -q[3], -q[0]);
+                    //Quaternion rot = new Quaternion(q[0], q[1], q[2], q[3]);
 
                     float angle = Quaternion.Angle((origin * rot), rig.rotation);
 
                     if (!originated && !use_gravity)
                     {
                         originated = true;
-                        
+
                         origin = Quaternion.Inverse(rot);
-                    }else if (use_gravity)
+                    }
+                    else if (use_gravity)
                     {
                         ///Gravity Indicator, Rotation///
                         Vector3 gdir = Input.gyro.gravity;
                         origin = Quaternion.EulerAngles(0, 0, -Mathf.Atan(gdir.y / gdir.x));
-                        
+
                         if (gdir.x > 0) origin = origin * Quaternion.Euler(0, 0, -90);
                         else origin = origin * Quaternion.Euler(0, 0, 90);
 
                         origin = origin * Quaternion.Inverse(rot);
                     }
 
-                    if (angle < 24)
+                    if (angle < 40)
                     {
                         rig.rotation = (origin * rot);
-                    }else if (angle >= 24)
+                    }
+                    else if (angle >= 40)
                     {
                         reset_count++;
                     }
 
-                    if(Time.timeSinceLevelLoad < 0.1f || reset_count > 50)
+                    if (reset_count > 20)
                     {
                         rig.rotation = (origin * rot);
                         reset_count = 0;
                     }
-                    
+
                 }
-                
+
                 rotate_smooth(new Vector3(0, 0, rig.localEulerAngles.z));
                
                 delta = cam.localRotation * delta;
                 move_smooth(delta);
-            }else if (data.Length < 2)
+            }else if (data.distance >= distance_threshold)
             {
-                int distance;
-                if(int.TryParse(data[0], out distance))
-                {
-                    Debug.Log(distance + " LOAD SCENE AGAIN");
-                    if (distance > 100 && distance < 256) SceneManager.LoadScene("1_RFID_waiting", LoadSceneMode.Single); /// go back to rfid waiting scene...
-                }else if (data[0].Contains("bat"))
-                {
-                    Debug.Log("battery: " + data[0].Split(':')[1]);
-                }
+                if (!isthisWatch) SceneManager.LoadScene("1_RFID_waiting", LoadSceneMode.Single); /// go back to rfid waiting scene...
+                else SceneManager.LoadScene("0_watch_start",LoadSceneMode.Single);
+                    
 
             }
 
+            
+
             reconnect_duration = 0;
-        }else if (income == "" || income == null)
+        }else if (income == null || income == null)
         {
             //Debug.Log(reconnect_duration++);
             reconnect_duration++;
@@ -126,6 +142,7 @@ public class camera_movement : MonoBehaviour
 
         if(reconnect_duration >= 200)
         {
+            Debug.Log("reconnecting...");
             GameObject.Find("BLEcontroller").GetComponent<aarcall>().connect();
             reconnect_duration = 0;
         }

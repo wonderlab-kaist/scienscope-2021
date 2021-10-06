@@ -31,7 +31,7 @@ public class interactable_highlight : MonoBehaviour
         Vector3 proj_aim = new Vector3(viewer_aim.transform.position.x, viewer_aim.transform.position.y, 0);
 
         float d = Vector3.Distance(proj_this, proj_aim);
-        Debug.Log(d);
+        //Debug.Log(d);
         if (d < radius) highlighted();
         else
         {
