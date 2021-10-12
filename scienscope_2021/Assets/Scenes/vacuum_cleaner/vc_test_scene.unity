@@ -10133,7 +10133,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -10307,11 +10307,11 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 512
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -11889,10 +11889,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3372522033569347474, guid: de6946edf8aa3c74a8293c100fd119a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: de6946edf8aa3c74a8293c100fd119a5,
         type: 3}
       propertyPath: m_Name
       value: exhaust_filter
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de6946edf8aa3c74a8293c100fd119a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6946edf8aa3c74a8293c100fd119a5, type: 3}
@@ -11998,8 +12008,9 @@ MonoBehaviour:
   dust: {fileID: 1768461897}
   fine_dust: {fileID: 978965350}
   dirt: {fileID: 580780268}
-  hepa_filter: {fileID: 0}
-  turbin: {fileID: 0}
+  hepa_filter: {fileID: 1837900136}
+  turbin: {fileID: 1077132245}
+  speed: {fileID: 1289901837}
 --- !u!1 &1264197118
 GameObject:
   m_ObjectHideFlags: 0
@@ -12242,9 +12253,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 988833070}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22615,6 +22626,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &1837900136 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3372522033569347474, guid: de6946edf8aa3c74a8293c100fd119a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1104782310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1837900137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837900136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 120.00006, y: 70.000015, z: 40.00002}
+  m_Center: {x: 0, y: 14.999916, z: -359.00003}
 --- !u!1 &1903252884
 GameObject:
   m_ObjectHideFlags: 0
