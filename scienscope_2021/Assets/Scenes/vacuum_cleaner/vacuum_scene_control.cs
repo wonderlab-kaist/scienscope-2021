@@ -5,6 +5,13 @@ using UnityEngine;
 public class vacuum_scene_control : MonoBehaviour
 {
     public ParticleSystem clip, dust, fine_dust, dirt;
+    public GameObject hepa_filter;
+    public GameObject turbin;
+
+    int turvin_gear = 1;
+    private float temperature;
+    private float filtered;
+
 
     // Start is called before the first frame update
     void Start()
