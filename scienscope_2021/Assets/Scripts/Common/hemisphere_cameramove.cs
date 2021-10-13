@@ -81,7 +81,7 @@ public class hemisphere_cameramove : MonoBehaviour
                 if (Mathf.Abs(data.mouse_y) > movement_threshold) y = data.mouse_y;
                 Vector3 delta = new Vector3(-y, x, 0);
 
-                //Quaternion for ratation
+                //Quaternion for rotation
                 for (int i = 0; i < 3; i++) q[i + 1] = data.q[i] / 1073741824f;
 
                 if (1 - Mathf.Pow(q[1], 2) - Mathf.Pow(q[2], 2) - Mathf.Pow(q[3], 2) > 0 && Mathf.Abs(q[1]) < 1 && Mathf.Abs(q[2]) < 1 && Mathf.Abs(q[3]) < 1)
