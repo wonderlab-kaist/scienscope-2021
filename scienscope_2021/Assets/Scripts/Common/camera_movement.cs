@@ -142,7 +142,7 @@ public class camera_movement : MonoBehaviour
 
         if(reconnect_duration >= 200)
         {
-            Debug.Log("reconnecting...");
+            //Debug.Log("reconnecting...");
             GameObject.Find("BLEcontroller").GetComponent<aarcall>().connect();
             reconnect_duration = 0;
         }
