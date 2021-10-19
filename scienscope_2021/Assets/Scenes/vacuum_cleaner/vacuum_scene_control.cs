@@ -11,6 +11,8 @@ public class vacuum_scene_control : MonoBehaviour
     public GameObject turbin;
     public Slider speed;
 
+    public GameObject warning_panel;
+    public GameObject change_filter_button;
 
     private float turvin_gear = 0.5f;
     private float temperature;
@@ -20,7 +22,7 @@ public class vacuum_scene_control : MonoBehaviour
 
     private AudioSource vacuum_sound;
     private float vacuum_volume;
-
+    private GameObject lastHit;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class vacuum_scene_control : MonoBehaviour
         filter_dust.emissionRate = 0.0f;
 
         vacuum_sound = GetComponent<AudioSource>();
+        warning_panel.active = false;
     }
     
     void Update()
@@ -60,7 +63,33 @@ public class vacuum_scene_control : MonoBehaviour
         if (filtered > 200)
         {
             hepa_filter.transform.localPosition = new Vector3(Mathf.Sin(Time.time * 1000f) * 2 * (filtered) / 255f, Mathf.Sin(Time.time * 1000f) * 2 * (filtered) / 255f, 0);
-            filter_dust.emissionRate = 8;
+
+            if (filter_dust.emissionRate < 8)
+            {
+                StartCoroutine("warning_message");
+                filter_dust.emissionRate = 8;
+            }
+
+            RaycastHit hit;
+
+            if(Physics.Raycast(GameObject.Find("viewer_outer_ring").transform.position, Vector3.forward, out hit, Mathf.Infinity))
+            {
+                //Debug.Log("did");
+                lastHit = hit.transform.gameObject;
+                if (lastHit.GetComponent<Outline>() != null)
+                {
+                    lastHit.GetComponent<Outline>().OutlineWidth = 4.0f;
+                    warning_panel.SetActive(false);
+                    change_filter_button.SetActive(true);
+                }
+                
+            }
+            else if(lastHit != null && lastHit.GetComponent<Outline>() != null)
+            {
+                lastHit.GetComponent<Outline>().OutlineWidth = 0f;
+                warning_panel.SetActive(true);
+                change_filter_button.SetActive(false);
+            }
         }
 
         //control sound//
@@ -110,5 +139,20 @@ public class vacuum_scene_control : MonoBehaviour
     public void particle_filtered(int numb_particles)
     {
         filtered += numb_particles+1;
+    }
+
+    IEnumerator warning_message()
+    {
+        for(int i=0;i<5;i++)
+        {
+            warning_panel.active = !warning_panel.active;
+
+            yield return new WaitForSeconds(.5f);
+        }
+    }
+
+    public void change_filter()
+    {
+        
     }
 }
