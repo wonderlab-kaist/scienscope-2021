@@ -42,7 +42,7 @@ public class TAG_loading : MonoBehaviour
                 //Debug.Log(tmp.tag_id[0].ToString('X2'));
                 /// move on contents scenes ///
                 scene_detected = true;
-                SceneManager.LoadSceneAsync("2_brain", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                SceneManager.LoadSceneAsync(1, LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
                 
                 
             }

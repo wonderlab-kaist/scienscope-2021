@@ -148,7 +148,7 @@ public class hemisphere_cameramove : MonoBehaviour
                 Vector3 height_axis = Quaternion.Euler(new Vector3(0,90,0)) * new Vector3(spheral_pos.x, 0, spheral_pos.z);
                 spheral_pos = Quaternion.AngleAxis(-y_angle_pivot, height_axis) * spheral_pos;
 
-                Debug.Log(spheral_pos.normalized);
+                //Debug.Log(spheral_pos.normalized);
 
                 cam.position = brain_pivot.position + spheral_pos;
                 //cam.LookAt(brain_pivot, Vector3.up);
