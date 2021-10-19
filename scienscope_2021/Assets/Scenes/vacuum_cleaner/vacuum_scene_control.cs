@@ -40,6 +40,8 @@ public class vacuum_scene_control : MonoBehaviour
     
     void Update()
     {
+        //if(Input.anyKeyDown) hepa_filter.GetComponent<Animator>().Play("filter_change");
+
         speed.value = (int)(speed.value);
         turvin_gear = speed.value;
 
@@ -87,6 +89,7 @@ public class vacuum_scene_control : MonoBehaviour
             else if(lastHit != null && lastHit.GetComponent<Outline>() != null)
             {
                 lastHit.GetComponent<Outline>().OutlineWidth = 0f;
+                lastHit = null;
                 warning_panel.SetActive(true);
                 change_filter_button.SetActive(false);
             }
@@ -153,6 +156,12 @@ public class vacuum_scene_control : MonoBehaviour
 
     public void change_filter()
     {
-        
+        filtered = 0;
+        lastHit.GetComponent<Outline>().OutlineWidth = 0f;
+        lastHit = null;
+        warning_panel.SetActive(false);
+        change_filter_button.SetActive(false);
+        filter_dust.emissionRate = 0;
+        hepa_filter.GetComponent<Animator>().Play("filter_change");
     }
 }
