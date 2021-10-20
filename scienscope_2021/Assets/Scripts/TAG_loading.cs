@@ -42,7 +42,7 @@ public class TAG_loading : MonoBehaviour
                 //Debug.Log(tmp.tag_id[0].ToString('X2'));
                 /// move on contents scenes ///
                 scene_detected = true;
-                SceneManager.LoadSceneAsync("vc_test_scene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                SceneManager.LoadSceneAsync("Moon_scene", LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
                 
                 
             }

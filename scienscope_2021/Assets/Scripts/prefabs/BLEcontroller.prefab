@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deb: {fileID: 0}
-  cursor: {fileID: 0}
+  default_ble_address: F8:D8:39:47:6D:E4
