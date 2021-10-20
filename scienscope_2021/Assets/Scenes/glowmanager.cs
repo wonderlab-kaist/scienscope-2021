@@ -23,4 +23,10 @@ public class glowmanager : MonoBehaviour
 
         
     }
+
+
+    void Update()
+    {
+        
+    }
 }

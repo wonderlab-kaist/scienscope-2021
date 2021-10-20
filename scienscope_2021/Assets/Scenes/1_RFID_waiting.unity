@@ -287,8 +287,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
+        type: 3}
       propertyPath: RFID_address.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
@@ -303,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
       propertyPath: RFID_address.Array.data[2]
-      value: 8D8432F5
+      value: 4B1C20AD
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
@@ -332,6 +337,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6cf69e95123f2041a4660b019fe2fc0, type: 3}
+--- !u!1 &654715058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8851066768334554599, guid: b6cf69e95123f2041a4660b019fe2fc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 654715057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &654715059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654715058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc6942bd979844a4a2cf47aa65c06a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &654715060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654715058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b95f64f7d11743b7b7c930ba448808b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heading: {fileID: 1547047014}
+  explain: {fileID: 1027033977}
+  RFID_address:
+  - FD2F31F5
+  - 4B1C20AD
 --- !u!1001 &689956836
 PrefabInstance:
   m_ObjectHideFlags: 0
