@@ -9,20 +9,24 @@ public class vacuum_scene_control : MonoBehaviour
     public ParticleSystem filter_dust;
     public GameObject hepa_filter;
     public GameObject turbin;
-    public Slider speed;
+    //public Slider speed;
 
     public GameObject warning_panel;
     public GameObject change_filter_button;
+    public Text power;
 
-    private float turvin_gear = 0.5f;
+    private float turvin_gear = 0.0f;
     private float temperature;
     private float filtered;
 
     private float vacuum_speed_constant = 1.8f;
+    private long[] viberate_pattern = { 1000, 500, 1000, 500, 1000, 500 };
+    private long[] button_clicked = { 200, 100 };
 
     private AudioSource vacuum_sound;
     private float vacuum_volume;
     private GameObject lastHit;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +46,9 @@ public class vacuum_scene_control : MonoBehaviour
     {
         //if(Input.anyKeyDown) hepa_filter.GetComponent<Animator>().Play("filter_change");
 
-        speed.value = (int)(speed.value);
-        turvin_gear = speed.value;
-
         // determining turvin speed with slider
         turbin.GetComponent<Animator>().speed = turvin_gear;
+        power.text = turvin_gear.ToString();
 
         // up particles speed with turvin speed
         clip.startSpeed = vacuum_speed_constant * turvin_gear;
@@ -70,6 +72,7 @@ public class vacuum_scene_control : MonoBehaviour
             {
                 StartCoroutine("warning_message");
                 filter_dust.emissionRate = 8;
+                GameObject.Find("BLEcontroller").GetComponent<aarcall>().vibrate_phone(viberate_pattern);
             }
 
             RaycastHit hit;
@@ -102,9 +105,18 @@ public class vacuum_scene_control : MonoBehaviour
         if (vacuum_sound.isPlaying) vacuum_sound.pitch = 0.4f + turvin_gear * 0.3f;
     }
 
+    public void add_turvin(int btn)
+    {
+        GameObject.Find("BLEcontroller").GetComponent<aarcall>().vibrate_phone(button_clicked);
+        turvin_gear += btn;
+        if (turvin_gear < 0) turvin_gear = 0;
+        else if (turvin_gear > 3) turvin_gear = 3;
+    }
+
     public void particle_burst(int type)
     {
-        if(turvin_gear >= 1f)
+        GameObject.Find("BLEcontroller").GetComponent<aarcall>().vibrate_phone(button_clicked);
+        if (turvin_gear >= 1f)
         {
             switch (type)
             {
@@ -163,5 +175,7 @@ public class vacuum_scene_control : MonoBehaviour
         change_filter_button.SetActive(false);
         filter_dust.emissionRate = 0;
         hepa_filter.GetComponent<Animator>().Play("filter_change");
+        hepa_filter.GetComponent<AudioSource>().Play();
     }
+    
 }
