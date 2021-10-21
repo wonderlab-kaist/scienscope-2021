@@ -372,6 +372,7 @@ MonoBehaviour:
   RFID_address:
   - FD2F31F5
   - 4B1C20AD
+  - 2B0534AD
 --- !u!1001 &689956836
 PrefabInstance:
   m_ObjectHideFlags: 0

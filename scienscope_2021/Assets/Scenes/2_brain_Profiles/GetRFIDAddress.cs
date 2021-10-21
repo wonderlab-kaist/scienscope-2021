@@ -9,20 +9,19 @@ public class GetRFIDAddress : MonoBehaviour
     public GameObject cam2;
     public GameObject cam3;
 
-
     public GameObject brain1;
     public GameObject brain2;
     public GameObject brain3;
-
 
     public Canvas canvas;
 
     private string RFID;
 
+
     //public void GetRFIDScene2(){
     void Start()
     {
-        
+        brain2.GetComponent<glowmanager>().SetGlow();
         RFID = SaveRFIDAddress.id;
 
         if (RFID=="4B1C20AD")
@@ -50,10 +49,17 @@ public class GetRFIDAddress : MonoBehaviour
             // camera3.enabled= false;
             // camera2.enabled = true;
             //anvas.worldCamera = camera2;
-            
-
 
             
+        }
+
+        if (RFID=="2B0534AD")
+        {
+            cam3.SetActive(true);
+            cam1.SetActive(false);
+            cam2.SetActive(false);
+            canvas.worldCamera = cam3.GetComponent<Camera>();
+            brain3.GetComponent<glowmanager>().SetGlow();
         }
 
     }
