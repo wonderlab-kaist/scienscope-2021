@@ -18,11 +18,18 @@ public class TAG_loading : MonoBehaviour
 
     public string[] RFID_address;
 
+    public GameObject scienscope_illust;
+    public ParticleSystem ps_effect;
+    public Transform ps_origin;
+
     private bool scene_detected = false;
+    private Vector3 sc_illust_origin;
     
     void Start()
     {
         address.SetLastRFID("");
+        sc_illust_origin = scienscope_illust.transform.position;
+        
     }
 
     // Update is called once per frame
@@ -32,10 +39,15 @@ public class TAG_loading : MonoBehaviour
 
         if (tmp!=null&&Application.platform == RuntimePlatform.Android)
         {
-            heading.text = "rea";
+            //heading.text = "rea";
             //Debug.Log(tmp);
+            scienscope_illust.transform.position = sc_illust_origin + new Vector3((255-tmp.distance)*0.00125f, 0, 0);
+
+
             if (!(tmp.tag_id[0] == 0&& tmp.tag_id[1] == 0&& tmp.tag_id[2] == 0&& tmp.tag_id[3] == 0) && !scene_detected)
             {
+                Instantiate(ps_effect, ps_origin).transform.localPosition = Vector3.zero;
+
                 explain.text = "잠시만 기다려주세요...";
                 Debug.Log(System.BitConverter.ToString(tmp.tag_id).Replace("-",""));
 
