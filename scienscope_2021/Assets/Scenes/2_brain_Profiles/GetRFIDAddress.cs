@@ -21,8 +21,11 @@ public class GetRFIDAddress : MonoBehaviour
     //public void GetRFIDScene2(){
     void Start()
     {
-        brain2.GetComponent<glowmanager>().SetGlow();
+        //brain2.GetComponent<glowmanager_>().SetGlow();
         RFID = SaveRFIDAddress.id;
+        brain1.GetComponent<glowmanager_r>().SetGlow();
+        //brain2.GetComponent<glowmanager_g>().SetGlow();
+        //brain3.GetComponent<glowmanager_b>().SetGlow();
 
         if (RFID=="4B1C20AD")
         {
@@ -33,7 +36,7 @@ public class GetRFIDAddress : MonoBehaviour
             cam2.SetActive(false);
             cam3.SetActive(false);
             canvas.worldCamera = cam1.GetComponent<Camera>();
-            brain1.GetComponent<glowmanager>().SetGlow();
+            brain1.GetComponent<glowmanager_r>().SetGlow();
             
         }
 
@@ -44,7 +47,7 @@ public class GetRFIDAddress : MonoBehaviour
             cam1.SetActive(false);
             cam3.SetActive(false);
             canvas.worldCamera = cam2.GetComponent<Camera>();
-            brain2.GetComponent<glowmanager>().SetGlow();
+            brain2.GetComponent<glowmanager_g>().SetGlow();
             // camera1.enabled= false;
             // camera3.enabled= false;
             // camera2.enabled = true;
@@ -59,7 +62,7 @@ public class GetRFIDAddress : MonoBehaviour
             cam1.SetActive(false);
             cam2.SetActive(false);
             canvas.worldCamera = cam3.GetComponent<Camera>();
-            brain3.GetComponent<glowmanager>().SetGlow();
+            brain3.GetComponent<glowmanager_b>().SetGlow();
         }
 
     }

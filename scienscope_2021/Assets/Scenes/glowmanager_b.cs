@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class glowmanager : MonoBehaviour
+public class glowmanager_b : MonoBehaviour
 {
     public Material original, glow;
     bool isGlowing = false;
@@ -24,14 +24,12 @@ public class glowmanager : MonoBehaviour
             isGlowing = false;
         }
 
-
-        
     }
 
     void Start()
     {
         emissiveColor = glow.color;
-        Intensity = emissiveColor.g;
+        Intensity = emissiveColor.b;
         // Debug.Log(emissiveColor.g);
         // Debug.Log(Intensity);
         //glow.color = Color.red;
@@ -46,10 +44,10 @@ public class glowmanager : MonoBehaviour
             
             if (decreasing == true)
             {
-                Intensity = Intensity - 0.01f;
+                Intensity = Intensity - 0.02f;
                 if (Intensity>0)
                 {
-                    emissiveColor.g = Intensity;
+                    emissiveColor.b = Intensity;
                     glow.color = emissiveColor;
                 }
             
@@ -59,23 +57,23 @@ public class glowmanager : MonoBehaviour
             {
                     
                 Intensity = Intensity + 0.02f;
-                emissiveColor.g = Intensity;
+                emissiveColor.b = Intensity;
                 glow.color = emissiveColor;
             
             }
-            if (Intensity > 2.7f)
+            if (Intensity > 3.5f)
             {
                 decreasing = true;
             }
 
-            if (0.5 > Intensity)
+            if (0.1 > Intensity)
             {
                 decreasing = false;
-                Intensity = 0.5f;
+                Intensity = 0.1f;
 
             }
-            // Debug.Log(Intensity);
-            // Debug.Log(decreasing);
+
+
             
         }
     }
