@@ -5,7 +5,7 @@ using UnityEngine;
 public static class address
 {
     public static string BTaddress = "";
-    private static string lastRFID = "10006E682731";
+    private static string lastRFID = "";
     //public static GameObject aimed_object;
     
 
@@ -44,6 +44,11 @@ public static class address
     public static void SetLastRFID(string rfid)
     {
         lastRFID = rfid;
+    }
+
+    public static string GetLastRFID()
+    {
+        return lastRFID;
     }
 
     public static int GetCurrentSceneNumber() //현재 씬넘버
