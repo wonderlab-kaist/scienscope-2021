@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [RequireComponent(typeof(AudioSource))]
 
 public class mic_input : MonoBehaviour
 {
-    AudioSource audio;
+    AudioSource audio_this;
     string input;
     float sensitivity = 100f;
     float mTimer, mRefTime;
@@ -14,12 +15,14 @@ public class mic_input : MonoBehaviour
 
     float loudness;
 
+    public Text debug;
+
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audio_this = this.GetComponent<AudioSource>();
         mRefTime = 1.0f;
-        audio.loop = true; // Set the AudioClip to loop
-        audio.mute = false; // Mute the sound, we don't want the player to hear it
+        audio_this.loop = true; // Set the AudioClip to loop
+        //audio_this.mute = false; // Mute the sound, we don't want the player to hear it
         input = Microphone.devices[0].ToString();
         GetMicCaps();
     }
@@ -29,7 +32,7 @@ public class mic_input : MonoBehaviour
     {
         //Debug.Log(Microphone.devices[0].ToString());
         loudness = GetAveragedVolume() * sensitivity;
-
+        debug.text = loudness.ToString() + "  " +input;
         if (!Microphone.IsRecording(input))
         {
             StartMicrophone();
@@ -60,14 +63,14 @@ public class mic_input : MonoBehaviour
 
     public void StartMicrophone()
     {
-        audio.clip = Microphone.Start(input, true, 10, maxFreq);//Starts recording
+        audio_this.clip = Microphone.Start(input, true, 10, maxFreq);//Starts recording
         while (!(Microphone.GetPosition(input) > 0)) { } // Wait until the recording has started
-        audio.Play(); // Play the audio source!
+        audio_this.Play(); // Play the audio source!
     }
 
     public void StopMicrophone()
     {
-        audio.Stop();//Stops the audio
+        audio_this.Stop();//Stops the audio
         Microphone.End(input);//Stops the recording of the device
     }
 
@@ -75,12 +78,12 @@ public class mic_input : MonoBehaviour
     {
         float[] data = new float[amountSamples];
         float a = 0;
-        audio.GetOutputData(data, 0);
+        audio_this.GetOutputData(data, 0);
         foreach (float s in data)
         {
             a += Mathf.Abs(s);
         }
-        return a / amountSamples;
+        return a / (float)amountSamples;
     }
     
     public float getLoudness()
