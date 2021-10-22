@@ -7,6 +7,8 @@ public class brain_scene_control : MonoBehaviour
     public GameObject brain;
     public GameObject[] sub_brain;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,19 +17,19 @@ public class brain_scene_control : MonoBehaviour
         //if (RFID=="4B1C20AD")
         if (RFID == "04387B9A")
         {
-            sub_brain[0].GetComponent<glowmanager_r>().SetGlow();
+            //sub_brain[0].GetComponent<glowmanager_r>().SetGlow();
         }
         //if (RFID=="FD2F31F5")
         if (RFID == "043C7B9A")
         {
             brain.transform.Rotate(new Vector3(0, 90, 0));
-            sub_brain[1].GetComponent<glowmanager_g>().SetGlow();
+            //sub_brain[1].GetComponent<glowmanager_g>().SetGlow();
         }
 
         if (RFID == "2B0534AD")
         {
             brain.transform.Rotate(new Vector3(0, 180, 0));
-            sub_brain[2].GetComponent<glowmanager_b>().SetGlow();
+            //sub_brain[2].GetComponent<glowmanager_b>().SetGlow();
         }
     }
 
@@ -36,5 +38,7 @@ public class brain_scene_control : MonoBehaviour
     {
         
     }
+
+
 
 }
