@@ -44,7 +44,7 @@ public class glowmanager_b : MonoBehaviour
             
             if (decreasing == true)
             {
-                Intensity = Intensity - 0.02f;
+                Intensity = Intensity - 0.04f;
                 if (Intensity>0)
                 {
                     emissiveColor.b = Intensity;
@@ -56,7 +56,7 @@ public class glowmanager_b : MonoBehaviour
             else if (decreasing == false)
             {
                     
-                Intensity = Intensity + 0.02f;
+                Intensity = Intensity + 0.04f;
                 emissiveColor.b = Intensity;
                 glow.color = emissiveColor;
             

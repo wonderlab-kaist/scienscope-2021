@@ -23,7 +23,7 @@ public class GetRFIDAddress : MonoBehaviour
     {
         //brain2.GetComponent<glowmanager_>().SetGlow();
         RFID = SaveRFIDAddress.id;
-        brain1.GetComponent<glowmanager_r>().SetGlow();
+        //brain1.GetComponent<glowmanager_r>().SetGlow();
         //brain2.GetComponent<glowmanager_g>().SetGlow();
         //brain3.GetComponent<glowmanager_b>().SetGlow();
 
@@ -52,7 +52,6 @@ public class GetRFIDAddress : MonoBehaviour
             // camera3.enabled= false;
             // camera2.enabled = true;
             //anvas.worldCamera = camera2;
-
             
         }
 
