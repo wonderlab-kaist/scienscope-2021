@@ -22,12 +22,13 @@ public class GetRFIDAddress : MonoBehaviour
     void Start()
     {
         //brain2.GetComponent<glowmanager_>().SetGlow();
-        RFID = SaveRFIDAddress.id;
+        RFID = address.GetLastRFID();
         //brain1.GetComponent<glowmanager_r>().SetGlow();
         //brain2.GetComponent<glowmanager_g>().SetGlow();
         //brain3.GetComponent<glowmanager_b>().SetGlow();
 
-        if (RFID=="4B1C20AD")
+        //if (RFID=="4B1C20AD")
+        if(RFID == "04387B9A")
         {
             // camera1.enabled = true;
             // camera2.enabled= false;
@@ -40,7 +41,8 @@ public class GetRFIDAddress : MonoBehaviour
             
         }
 
-        if (RFID=="FD2F31F5")
+        //if (RFID=="FD2F31F5")
+        if (RFID == "043C7B9A")
         {   
 
             cam2.SetActive(true);
@@ -52,6 +54,7 @@ public class GetRFIDAddress : MonoBehaviour
             // camera3.enabled= false;
             // camera2.enabled = true;
             //anvas.worldCamera = camera2;
+
             
         }
 

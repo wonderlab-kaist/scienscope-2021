@@ -50,8 +50,9 @@ public class TAG_loading : MonoBehaviour
 
                 explain.text = "잠시만 기다려주세요...";
                 Debug.Log(System.BitConverter.ToString(tmp.tag_id).Replace("-",""));
+                string id = System.BitConverter.ToString(tmp.tag_id).Replace("-", "");
+                address.SetLastRFID(id); //save RFID Address for load in next scene
 
-                //Debug.Log(tmp.tag_id[0].ToString('X2'));
                 /// move on contents scenes ///
                 scene_detected = true;
                 SceneManager.LoadSceneAsync(1, LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
