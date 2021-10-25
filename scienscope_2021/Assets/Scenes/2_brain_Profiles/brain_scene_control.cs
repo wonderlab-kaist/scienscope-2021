@@ -11,6 +11,7 @@ public class brain_scene_control : MonoBehaviour
     void Start()
     {
         string RFID = address.GetLastRFID();
+        sub_brain[3].GetComponent<glowmanager_p>().SetGlow();
 
         //if (RFID=="4B1C20AD")
         if (RFID == "04387B9A")

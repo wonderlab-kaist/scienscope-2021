@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -366,6 +366,7 @@ MonoBehaviour:
   - {fileID: 1193471789}
   - {fileID: 878727552}
   - {fileID: 756011086}
+  - {fileID: 502725416}
 --- !u!1 &33588914
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +808,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502725417}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: glowmanager, Assembly-CSharp
         m_MethodName: SetGlow
         m_Mode: 1
@@ -877,7 +878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &431148363
 Transform:
   m_ObjectHideFlags: 0
@@ -1068,7 +1069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &474870117
 Transform:
   m_ObjectHideFlags: 0
@@ -1077,7 +1078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474870116}
   m_LocalRotation: {x: -0, y: 0.99950194, z: -0.031557743, w: 0}
-  m_LocalPosition: {x: 0, y: 0.15, z: 11.25}
+  m_LocalPosition: {x: 0, y: 0.366, z: 11.236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1188549972}
@@ -1245,7 +1246,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 165988641}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &502725417
+--- !u!114 &502725418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1254,11 +1255,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 502725416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee9f90e5a48f414a830854866a2e57d, type: 3}
+  m_Script: {fileID: 11500000, guid: fe5cda3006e484fd9b5443a36f4b3bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   original: {fileID: 2100000, guid: ae80278f188d24816878f973681b6d74, type: 2}
-  glow: {fileID: 2100000, guid: 77773a55f970844c1a1c2bd361d6a565, type: 2}
+  glow: {fileID: 2100000, guid: 0916e5cab637442f18677aa3f6ff79e1, type: 2}
 --- !u!1001 &574497643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4454,7 +4455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1961945887
 MonoBehaviour:
   m_ObjectHideFlags: 0
