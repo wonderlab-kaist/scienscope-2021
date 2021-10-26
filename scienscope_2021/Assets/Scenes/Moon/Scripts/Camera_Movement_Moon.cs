@@ -13,6 +13,7 @@ public class Camera_Movement_Moon : MonoBehaviour
     float distance_threshold = 60;
     float distance_limitation = 150;
 
+    public Text altitude;
     public Text raw_data; //debugging text, monitoring raw data from module
     private stethoscope_data data;
     public Transform cam;
@@ -175,7 +176,8 @@ public class Camera_Movement_Moon : MonoBehaviour
             yield return new WaitForSeconds(0.02f / 3f);
         }
         cam.position = new Vector3(cam.position.x, cam_original_height + data.distance/3, cam.position.z);
-        Debug.Log(data.distance);
+        altitude.text = string.Format("{0:N2}", data.distance); //altitude
+        raw_data.text = cam.position.ToString();
     }
 
     IEnumerator rotateSmooth(Vector3 d)
