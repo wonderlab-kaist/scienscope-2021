@@ -27,35 +27,21 @@ public class glowmanager_r : MonoBehaviour
 
         
     }
-    public void SetGlow(bool _isGlowing)
-    {
-        isGlowing = _isGlowing;
-        if (isGlowing)
-        {
-            gameObject.GetComponent<MeshRenderer>().material = glow;
-            isGlowing = true;
-        }
-        else
-        {
-            gameObject.GetComponent<MeshRenderer>().material = original;
-            isGlowing = false;
-        }
-    }
 
     void Start()
     {
         emissiveColor = glow.color;
         Intensity = emissiveColor.r;
-        //Debug.Log(emissiveColor.r);
-        //Debug.Log(Intensity);
+        Debug.Log(emissiveColor.r);
+        Debug.Log(Intensity);
         //glow.color = Color.red;
 
     }
 
     void Update()
     {
-        //Debug.Log(emissiveColor.r);
-        //Debug.Log(Intensity);
+        Debug.Log(emissiveColor.r);
+        Debug.Log(Intensity);
         if (isGlowing==true)
         {
             // glow.color = Color.red;

@@ -25,20 +25,6 @@ public class glowmanager_b : MonoBehaviour
         }
 
     }
-    public void SetGlow(bool _isGlowing)
-    {
-        isGlowing = _isGlowing;
-        if (isGlowing == true)
-        {
-            gameObject.GetComponent<MeshRenderer>().material = glow;
-            isGlowing = true;
-        }
-        else
-        {
-            gameObject.GetComponent<MeshRenderer>().material = original;
-            isGlowing = false;
-        }
-    }
 
     void Start()
     {
