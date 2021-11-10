@@ -9,6 +9,7 @@ public class glowmanager_r : MonoBehaviour
     float Intensity;
     Color emissiveColor;
     bool decreasing = true;
+    public AudioSource guide_voice;
     //public GameObject brain;
 
     public void SetGlow()
@@ -56,11 +57,13 @@ public class glowmanager_r : MonoBehaviour
     {
         //Debug.Log(emissiveColor.r);
         //Debug.Log(Intensity);
-        if (isGlowing==true)
+        if (isGlowing==true && guide_voice.isPlaying)
         {
+            emissiveColor.r = GetAveragedVolume() * 2f;
+            glow.color = emissiveColor;
             // glow.color = Color.red;
-            
-            if (decreasing == true)
+
+            /*if (decreasing == true)
             {
                 Intensity = Intensity - 0.01f;
                 if (Intensity > 0)
@@ -89,13 +92,23 @@ public class glowmanager_r : MonoBehaviour
                 decreasing = false;
                 Intensity = 0.1f;
 
-            }
+            }*/
 
-        // Debug.Log(emissiveColor.r);
-        // Debug.Log(Intensity);
-            
+            // Debug.Log(emissiveColor.r);
+            // Debug.Log(Intensity);
+
         }
     }
 
-
+    float GetAveragedVolume()
+    {
+        float[] data = new float[5];
+        float a = 0;
+        guide_voice.GetOutputData(data, 0);
+        foreach (float s in data)
+        {
+            a += Mathf.Abs(s);
+        }
+        return a / 5f;
+    }
 }

@@ -15,6 +15,20 @@ public class vacuum_scene_control : MonoBehaviour
     public GameObject change_filter_button;
     public Text power;
 
+    public GameObject guide_box;
+
+    /// <summary>
+    /// Small guide paragraph
+    ///
+    /// </summary>
+    private string clip_explanation = "클립과 같이 큰 이물질은 보이는 바와 같이 더스트백에 걸러집니다.";
+    private string dirt_explanation = "미세한 먼지들은 더스트백을 통과해서 터빈을 지나, 정화 필터에서 걸러집니다.";
+    private string dust_explanation = "머리카락이나 솜과 같은 섬유질들은 더스트백에서 걸러집니다.";
+    private string finedust_explanation = "초미세먼지들은 정화 필터에서도 완전히 걸러지지 않습니다. 우리가 물걸레질을 해야하는 이유지요.";
+
+    private string turvin_explanation = "가운데 터빈이 돌며 발생하는 흡기에 의해 이물질이 더스트백과 정화 필터에 걸러집니다. 더스트백과 정화 필터는 주기적인 교체가 필요합니다.";
+
+
     private float turvin_gear = 0.0f;
     private float temperature;
     private float filtered;
@@ -22,6 +36,7 @@ public class vacuum_scene_control : MonoBehaviour
     private float vacuum_speed_constant = 1.8f;
     private long[] viberate_pattern = { 1000, 500, 1000, 500, 1000, 500 };
     private long[] button_clicked = { 200, 100 };
+    private float duration = 3.0f;
 
     private AudioSource vacuum_sound;
     private float vacuum_volume;
@@ -39,7 +54,8 @@ public class vacuum_scene_control : MonoBehaviour
         filter_dust.emissionRate = 0.0f;
 
         vacuum_sound = GetComponent<AudioSource>();
-        warning_panel.active = false;
+        warning_panel.SetActive(false);
+        guide_box.SetActive(false);
     }
     
     void Update()
@@ -48,6 +64,7 @@ public class vacuum_scene_control : MonoBehaviour
 
         // determining turvin speed with slider
         turbin.GetComponent<Animator>().speed = turvin_gear;
+        if (power.text == "0" && turvin_gear == 1) pop_up_guide(-1);
         power.text = turvin_gear.ToString();
 
         // up particles speed with turvin speed
@@ -62,7 +79,7 @@ public class vacuum_scene_control : MonoBehaviour
         filter_color.color = new Color((255 - filtered)/255f, (255 - filtered) / 255f, (255 - filtered) / 255f);
 
         //Debug.Log(filtered);
-
+         
         // when the filter is done (max dirt)
         if (filtered > 200)
         {
@@ -177,5 +194,41 @@ public class vacuum_scene_control : MonoBehaviour
         hepa_filter.GetComponent<Animator>().Play("filter_change");
         hepa_filter.GetComponent<AudioSource>().Play();
     }
-    
+
+    public void pop_up_guide(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                guide_box.transform.GetChild(0).gameObject.GetComponent<Text>().text = clip_explanation;
+                break;
+            case 1:
+                guide_box.transform.GetChild(0).gameObject.GetComponent<Text>().text = dirt_explanation;
+                break;
+            case 2:
+                guide_box.transform.GetChild(0).gameObject.GetComponent<Text>().text = dust_explanation;
+                break;
+            case 3:
+                guide_box.transform.GetChild(0).gameObject.GetComponent<Text>().text = finedust_explanation;
+                break;
+            case -1:
+                
+                guide_box.transform.GetChild(0).gameObject.GetComponent<Text>().text = turvin_explanation;
+                break;
+        }
+
+        if (!guide_box.active) StartCoroutine("pop_up", duration);
+        else
+        {
+            StopCoroutine("pop_up");
+            StartCoroutine("pop_up", duration);
+        }
+    }
+
+    IEnumerator pop_up(float duration)
+    {
+        guide_box.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        guide_box.SetActive(false);
+    }
 }

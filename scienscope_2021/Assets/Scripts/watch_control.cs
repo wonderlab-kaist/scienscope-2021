@@ -7,8 +7,7 @@ public class watch_control : MonoBehaviour
 {
     public aarcall BLEcontroller;
 
-
-    private bool connected = false;
+    private bool scene_detected = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,21 +19,29 @@ public class watch_control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 0)
+        stethoscope_data tmp = new stethoscope_data(dataInput.getData());
+
+        if (tmp != null && Application.platform == RuntimePlatform.Android)
         {
-            if(!connected && dataInput.data_in.Count < 2)
+            //heading.text = "rea";
+            //Debug.Log(tmp);
+            //scienscope_illust.transform.position = sc_illust_origin + new Vector3((255 - tmp.distance) * 0.00125f, 0, 0);
+
+
+            if (!(tmp.tag_id[0] == 0 && tmp.tag_id[1] == 0 && tmp.tag_id[2] == 0 && tmp.tag_id[3] == 0) && !scene_detected)
             {
-                //BLEcontroller.connect();
+                //Instantiate(ps_effect, ps_origin).transform.localPosition = Vector3.zero;
 
-            }
-            else
-            {
-                connected = true;
+                //explain.text = "잠시만 기다려주세요...";
+                Debug.Log(System.BitConverter.ToString(tmp.tag_id).Replace("-", ""));
+                string id = System.BitConverter.ToString(tmp.tag_id).Replace("-", "");
+                address.SetLastRFID(id); //save RFID Address for load in next scene
 
-                //string tmp = dataInput.getData();
-                //if(tmp != "") Debug.Log(tmp);
+                /// move on contents scenes ///
+                scene_detected = true;
+                SceneManager.LoadSceneAsync(1, LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
 
-                //if (tmp.Contains("rfID")) SceneManager.LoadScene(1, LoadSceneMode.Single);
+
             }
         }
 

@@ -141,8 +141,13 @@ public class hemisphere_cameramove : MonoBehaviour
 
                 x_angle_pivot = Mathf.Asin(delta.x * gain /radius_pivot) * 180 / Mathf.PI;
                 y_angle_pivot = Mathf.Asin(-1*delta.y * gain / radius_pivot) * 180 / Mathf.PI;
-                
+                if (isthisWatch)
+                {
+                    //x_angle_pivot *= -1;
+                    //y_angle_pivot *= -1;
+                }
                 //Debug.Log(x_angle_pivot);
+
                 spheral_pos = Quaternion.Euler(new Vector3(0, x_angle_pivot, 0)) * spheral_pos;
 
                 Vector3 height_axis = Quaternion.Euler(new Vector3(0,90,0)) * new Vector3(spheral_pos.x, 0, spheral_pos.z);

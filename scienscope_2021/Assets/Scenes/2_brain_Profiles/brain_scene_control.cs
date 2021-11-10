@@ -9,44 +9,62 @@ public class brain_scene_control : MonoBehaviour
     public GameObject brain;
     public GameObject[] sub_brain; //2:watching
     public Button[] stimulate_btn;
+    public AudioSource guide_audio;
+    public AudioClip[] guide_sounds;
     public Toggle ear_btn;
 
     public GameObject guide_box;
+
+    private int scene_sub_numb; // 0:front 1:side 2:back 3:high_side
 
     private bool isListening = false;
     private string frontal_guide = "이렇게 제가 말하는 동안 뇌의 어느 부분이 빛나는 지 살펴 봅시다.";
     private string side_guide = "소리를 내어 자극에 뇌의 어느 부분이 반응하는 지 살펴 봅시다.";
     private string back_guide = "대뇌의 가장 뒷 부분에 해당하는 후두엽은 시각과 관련이 있습니다.";
     private string touch_guide = "버튼을 문질러, 간지러운 자극에 뇌의 어느 부분이 빛나는지 살펴 봅시다.";
+
     private float duration = 5.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         string RFID = address.GetLastRFID();
+        for (int i = 0; i < stimulate_btn.Length; i++) stimulate_btn[i].interactable = false;
+        ear_btn.interactable = false;
 
         //if (RFID=="4B1C20AD")
-        if (RFID == "04387B9A")
+        if (RFID == "04587B9A")
         {
             //sub_brain[0].GetComponent<glowmanager_r>().SetGlow();
+            stimulate_btn[2].interactable = true;
         }
         //if (RFID=="FD2F31F5")
-        if (RFID == "043C7B9A")
+        if (RFID == "04547B9A")
         {
             brain.transform.Rotate(new Vector3(0, 90, 0));
             //sub_brain[1].GetComponent<glowmanager_g>().SetGlow();
+            ear_btn.interactable = true;
         }
 
-        if (RFID == "2B0534AD")
+        if (RFID == "04507B9A")
         {
             brain.transform.Rotate(new Vector3(0, 180, 0));
             //sub_brain[2].GetComponent<glowmanager_b>().SetGlow();
+            stimulate_btn[0].interactable = true;
+        }
+
+        if (RFID == "04407B9A")
+        {
+            brain.transform.Rotate(new Vector3(0, 270, 0));
+            //sub_brain[2].GetComponent<glowmanager_b>().SetGlow();
+            stimulate_btn[1].interactable = true ;
         }
     }
 
         // Update is called once per frame
     void Update()
     {
+
         if (isListening) ear_btn.image.color = new Color(250f / 255f, 171 / 255f, 0f);
         else ear_btn.image.color = Color.white;
     }
@@ -88,7 +106,7 @@ public class brain_scene_control : MonoBehaviour
 
     public void quit_glowing(int index)
     {
-        Debug.Log("Quit!!!");
+        //Debug.Log("Quit!!!");
         switch (index)
         {
             case 0:
@@ -107,6 +125,13 @@ public class brain_scene_control : MonoBehaviour
     }
     public void pop_up_guide(int index)
     {
+        if (!guide_audio.isPlaying && (index!=0 ||isListening))
+        {
+            guide_audio.clip = guide_sounds[index];
+            guide_audio.Play();
+            Debug.Log("asdf");
+        }
+
         switch (index)
         {
             case 0:
@@ -162,10 +187,8 @@ public class brain_scene_control : MonoBehaviour
     IEnumerator speaking_something()
     {
         sub_brain[0].GetComponent<glowmanager_r>().SetGlow(true);
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(12.5f);
 
         sub_brain[0].GetComponent<glowmanager_r>().SetGlow(false);
     }
-    
-
 }
