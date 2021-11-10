@@ -9,7 +9,7 @@ public class camera_movement : MonoBehaviour
 {
     public float gain;
 
-    float movement_threshold = 200;
+    float movement_threshold = 300;
     float distance_threshold = 100;
 
     public Text raw_data; //debugging text, monitoring raw data from module
@@ -79,7 +79,6 @@ public class camera_movement : MonoBehaviour
                 {
                     q[0] = Mathf.Sqrt(1 - Mathf.Pow(q[1], 2) - Mathf.Pow(q[2], 2) - Mathf.Pow(q[3], 2));
                     Quaternion rot = new Quaternion(q[2], -q[1], -q[3], -q[0]);
-                    //Quaternion rot = new Quaternion(q[0], q[1], q[2], q[3]);
 
                     float angle = Quaternion.Angle((origin * rot), rig.rotation);
 

@@ -19,6 +19,7 @@ public class rfid_monitor : MonoBehaviour
     void Update()
     {
         stethoscope_data tmp = new stethoscope_data(dataInput.getData());
+        show_quat_data(tmp);
 
         if (tmp != null && Application.platform == RuntimePlatform.Android)
         {
@@ -35,5 +36,12 @@ public class rfid_monitor : MonoBehaviour
 
             }
         }
+    }
+
+    public void show_quat_data(stethoscope_data data)
+    {
+        string quat;
+        quat = "" + data.q[0]/ 1073741824f + "  " +data.q[1]/ 1073741824f + "  "+ data.q[2]/ 1073741824f;
+        Debug.Log(quat);
     }
 }
