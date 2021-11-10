@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -694,11 +694,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7292367088884250567, guid: b6cf69e95123f2041a4660b019fe2fc0,
-        type: 3}
       propertyPath: ps_effect
       value: 
       objectReference: {fileID: 198039469201688654, guid: 074e06aacafc6f84fa49eb1a4c4ab78c,
@@ -974,47 +969,10 @@ PrefabInstance:
     - target: {fileID: 6402122941289838925, guid: a11a62b43551f714ba9484f10da5a4a2,
         type: 3}
       propertyPath: default_ble_address
-<<<<<<< Updated upstream
       value: ED:41:B5:30:7F:BE
-=======
-      value: F8:D8:39:47:6D:E4
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11a62b43551f714ba9484f10da5a4a2, type: 3}
---- !u!1 &689956837 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6402122941289838924, guid: a11a62b43551f714ba9484f10da5a4a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 689956836}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &689956838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689956837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc6942bd979844a4a2cf47aa65c06a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &689956839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689956837}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b95f64f7d11743b7b7c930ba448808b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heading: {fileID: 0}
-  explain: {fileID: 0}
-  RFID_address: []
 --- !u!1 &724604555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,30 +1463,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1138978719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8851066768334554599, guid: b6cf69e95123f2041a4660b019fe2fc0,
-    type: 3}
-  m_PrefabInstance: {fileID: 654715057}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1138978720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138978719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b95f64f7d11743b7b7c930ba448808b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heading: {fileID: 1547047014}
-  explain: {fileID: 1027033977}
-  RFID_address:
-  - FD2F31F5
-  - 4B1C20AD
-  - 2B0534AD
 --- !u!1 &1200677468
 GameObject:
   m_ObjectHideFlags: 0
