@@ -5,21 +5,12 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
-<<<<<<< HEAD
-=======
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c491115020d27132b2a352c271821adf63707f6e225fdd8293c393707a1290a371526
-      flags: 0
-    RecentlyUsedScenePath-1:
-      value: 22424703114646680e0b0227036c491329031d39381735332827187df7ee3d2cfb
-      flags: 0
-    RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c0e2f2431310e133f273939201334acf53a31f6fe
       flags: 0
-    RecentlyUsedScenePath-3:
+    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c0d2f140519232266333e243d04
       flags: 0
->>>>>>> beom
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

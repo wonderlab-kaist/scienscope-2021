@@ -18,12 +18,12 @@ public class brain_scene_control : MonoBehaviour
     private int scene_sub_numb; // 0:front 1:side 2:back 3:high_side
 
     private bool isListening = false;
-    private string frontal_guide = "ÀÌ·¸°Ô Á¦°¡ ¸»ÇÏ´Â µ¿¾È ³úÀÇ ¾î´À ºÎºÐÀÌ ºû³ª´Â Áö »ìÆì º¾½Ã´Ù.";
-    private string side_guide = "¼Ò¸®¸¦ ³»¾î ÀÚ±Ø¿¡ ³úÀÇ ¾î´À ºÎºÐÀÌ ¹ÝÀÀÇÏ´Â Áö »ìÆì º¾½Ã´Ù.";
-    private string back_guide = "´ë³úÀÇ °¡Àå µÞ ºÎºÐ¿¡ ÇØ´çÇÏ´Â ÈÄµÎ¿±Àº ½Ã°¢°ú °ü·ÃÀÌ ÀÖ½À´Ï´Ù.";
-    private string touch_guide = "¹öÆ°À» ¹®Áú·¯, °£Áö·¯¿î ÀÚ±Ø¿¡ ³úÀÇ ¾î´À ºÎºÐÀÌ ºû³ª´ÂÁö »ìÆì º¾½Ã´Ù.";
+    private string frontal_guide = "ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã´ï¿½.";
+    private string side_guide = "ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú±Ø¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã´ï¿½.";
+    private string back_guide = "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ÎºÐ¿ï¿½ ï¿½Ø´ï¿½ï¿½Ï´ï¿½ ï¿½ÄµÎ¿ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.";
+    private string touch_guide = "ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú±Ø¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã´ï¿½.";
 
-    private float duration = 5.0f;
+    private float duration = 7.0f;
 
     // Start is called before the first frame update
     void Start()

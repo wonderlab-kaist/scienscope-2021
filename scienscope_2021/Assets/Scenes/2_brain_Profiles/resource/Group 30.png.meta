@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:scienscope_2021/Assets/Scenes/2_brain_Profiles/resource/Group 31.png.meta
-guid: 9942647a79d5d7b44bf25755681cd589
-=======
-guid: 9a2a066a01403c24b8b48ba6c5617370
->>>>>>> beom:scienscope_2021/Assets/Scenes/2_brain_Profiles/resource/Group 30.png.meta
+guid: 121a87dbbd5584c4daf4f7b1b2f58be3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -65,14 +61,14 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -84,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

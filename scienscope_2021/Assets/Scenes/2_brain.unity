@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623e11464796a423cb411efeca82f5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gain: 0.00013
+  gain: 0.00008
   raw_data: {fileID: 1441419658}
   brain_pivot: {fileID: 1489267289}
   cam: {fileID: 1188549972}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8377523}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d4e391bf31da414490da5e135bc8baa, type: 3}
   m_Name: 
@@ -3230,7 +3230,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a2a066a01403c24b8b48ba6c5617370, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 121a87dbbd5584c4daf4f7b1b2f58be3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
