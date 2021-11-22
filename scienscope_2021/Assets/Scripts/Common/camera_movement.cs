@@ -61,7 +61,7 @@ public class camera_movement : MonoBehaviour
             monitoring += data.q[0] + " " + data.q[1] + " " + data.q[2];
             monitoring += " "+data.distance;
             monitoring += " " + data.mouse_x+ " "+ data.mouse_y;
-            Debug.Log(monitoring);
+            //Debug.Log(monitoring);
 
             if (data.distance <= distance_threshold)
             {
@@ -142,7 +142,7 @@ public class camera_movement : MonoBehaviour
 
         if(reconnect_duration >= 200)
         {
-            Debug.Log("reconnecting...");
+            //Debug.Log("reconnecting...");
             GameObject.Find("BLEcontroller").GetComponent<aarcall>().connect();
             reconnect_duration = 0;
         }

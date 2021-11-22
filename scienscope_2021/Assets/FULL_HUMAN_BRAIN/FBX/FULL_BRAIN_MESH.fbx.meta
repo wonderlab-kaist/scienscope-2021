@@ -1,0 +1,1681 @@
+fileFormatVersion: 2
+guid: 4b91967699529457487f8c6454c79602
+timeCreated: 1518500051
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arrow_1
+    100002: Arrow_10
+    100004: Arrow_100
+    100006: Arrow_101
+    100008: Arrow_102
+    100010: Arrow_103
+    100012: Arrow_104
+    100014: Arrow_105
+    100016: Arrow_106
+    100018: Arrow_107
+    100020: Arrow_108
+    100022: Arrow_109
+    100024: Arrow_11
+    100026: Arrow_110
+    100028: Arrow_111
+    100030: Arrow_112
+    100032: Arrow_113
+    100034: Arrow_114
+    100036: Arrow_115
+    100038: Arrow_116
+    100040: Arrow_117
+    100042: Arrow_118
+    100044: Arrow_119
+    100046: Arrow_12
+    100048: Arrow_120
+    100050: Arrow_121
+    100052: Arrow_122
+    100054: Arrow_123
+    100056: Arrow_124
+    100058: Arrow_125
+    100060: Arrow_126
+    100062: Arrow_127
+    100064: Arrow_128
+    100066: Arrow_129
+    100068: Arrow_13
+    100070: Arrow_130
+    100072: Arrow_131
+    100074: Arrow_132
+    100076: Arrow_133
+    100078: Arrow_134
+    100080: Arrow_135
+    100082: Arrow_136
+    100084: Arrow_137
+    100086: Arrow_138
+    100088: Arrow_139
+    100090: Arrow_14
+    100092: Arrow_140
+    100094: Arrow_141
+    100096: Arrow_142
+    100098: Arrow_143
+    100100: Arrow_144
+    100102: Arrow_145
+    100104: Arrow_146
+    100106: Arrow_147
+    100108: Arrow_148
+    100110: Arrow_149
+    100112: Arrow_15
+    100114: Arrow_150
+    100116: Arrow_151
+    100118: Arrow_152
+    100120: Arrow_153
+    100122: Arrow_154
+    100124: Arrow_155
+    100126: Arrow_156
+    100128: Arrow_157
+    100130: Arrow_158
+    100132: Arrow_159
+    100134: Arrow_16
+    100136: Arrow_160
+    100138: Arrow_161
+    100140: Arrow_162
+    100142: Arrow_163
+    100144: Arrow_17
+    100146: Arrow_18
+    100148: Arrow_19
+    100150: Arrow_2
+    100152: Arrow_20
+    100154: Arrow_21
+    100156: Arrow_22
+    100158: Arrow_23
+    100160: Arrow_24
+    100162: Arrow_25
+    100164: Arrow_26
+    100166: Arrow_27
+    100168: Arrow_28
+    100170: Arrow_29
+    100172: Arrow_3
+    100174: Arrow_30
+    100176: Arrow_31
+    100178: Arrow_32
+    100180: Arrow_33
+    100182: Arrow_34
+    100184: Arrow_35
+    100186: Arrow_36
+    100188: Arrow_37
+    100190: Arrow_38
+    100192: Arrow_39
+    100194: Arrow_4
+    100196: Arrow_40
+    100198: Arrow_41
+    100200: Arrow_42
+    100202: Arrow_43
+    100204: Arrow_44
+    100206: Arrow_45
+    100208: Arrow_46
+    100210: Arrow_47
+    100212: Arrow_48
+    100214: Arrow_49
+    100216: Arrow_5
+    100218: Arrow_50
+    100220: Arrow_51
+    100222: Arrow_52
+    100224: Arrow_53
+    100226: Arrow_54
+    100228: Arrow_55
+    100230: Arrow_56
+    100232: Arrow_57
+    100234: Arrow_58
+    100236: Arrow_59
+    100238: Arrow_6
+    100240: Arrow_60
+    100242: Arrow_61
+    100244: Arrow_62
+    100246: Arrow_63
+    100248: Arrow_64
+    100250: Arrow_65
+    100252: Arrow_66
+    100254: Arrow_67
+    100256: Arrow_68
+    100258: Arrow_69
+    100260: Arrow_7
+    100262: Arrow_70
+    100264: Arrow_71
+    100266: Arrow_72
+    100268: Arrow_73
+    100270: Arrow_74
+    100272: Arrow_75
+    100274: Arrow_76
+    100276: Arrow_77
+    100278: Arrow_78
+    100280: Arrow_79
+    100282: Arrow_8
+    100284: Arrow_80
+    100286: Arrow_81
+    100288: Arrow_82
+    100290: Arrow_83
+    100292: Arrow_84
+    100294: Arrow_85
+    100296: Arrow_86
+    100298: Arrow_87
+    100300: Arrow_88
+    100302: Arrow_89
+    100304: Arrow_9
+    100306: Arrow_90
+    100308: Arrow_91
+    100310: Arrow_92
+    100312: Arrow_93
+    100314: Arrow_94
+    100316: Arrow_95
+    100318: Arrow_96
+    100320: Arrow_97
+    100322: Arrow_98
+    100324: Arrow_99
+    100326: Cerebellum_002
+    100328: FrontalLobe
+    100330: //RootNode
+    100332: Medulla_001
+    100334: Occipital_Lobe
+    100336: Parietal_Lobe
+    100338: SomatomotorCortex
+    100340: SomatosensoryCortex
+    100342: TemporalLobe
+    400000: Arrow_1
+    400002: Arrow_10
+    400004: Arrow_100
+    400006: Arrow_101
+    400008: Arrow_102
+    400010: Arrow_103
+    400012: Arrow_104
+    400014: Arrow_105
+    400016: Arrow_106
+    400018: Arrow_107
+    400020: Arrow_108
+    400022: Arrow_109
+    400024: Arrow_11
+    400026: Arrow_110
+    400028: Arrow_111
+    400030: Arrow_112
+    400032: Arrow_113
+    400034: Arrow_114
+    400036: Arrow_115
+    400038: Arrow_116
+    400040: Arrow_117
+    400042: Arrow_118
+    400044: Arrow_119
+    400046: Arrow_12
+    400048: Arrow_120
+    400050: Arrow_121
+    400052: Arrow_122
+    400054: Arrow_123
+    400056: Arrow_124
+    400058: Arrow_125
+    400060: Arrow_126
+    400062: Arrow_127
+    400064: Arrow_128
+    400066: Arrow_129
+    400068: Arrow_13
+    400070: Arrow_130
+    400072: Arrow_131
+    400074: Arrow_132
+    400076: Arrow_133
+    400078: Arrow_134
+    400080: Arrow_135
+    400082: Arrow_136
+    400084: Arrow_137
+    400086: Arrow_138
+    400088: Arrow_139
+    400090: Arrow_14
+    400092: Arrow_140
+    400094: Arrow_141
+    400096: Arrow_142
+    400098: Arrow_143
+    400100: Arrow_144
+    400102: Arrow_145
+    400104: Arrow_146
+    400106: Arrow_147
+    400108: Arrow_148
+    400110: Arrow_149
+    400112: Arrow_15
+    400114: Arrow_150
+    400116: Arrow_151
+    400118: Arrow_152
+    400120: Arrow_153
+    400122: Arrow_154
+    400124: Arrow_155
+    400126: Arrow_156
+    400128: Arrow_157
+    400130: Arrow_158
+    400132: Arrow_159
+    400134: Arrow_16
+    400136: Arrow_160
+    400138: Arrow_161
+    400140: Arrow_162
+    400142: Arrow_163
+    400144: Arrow_17
+    400146: Arrow_18
+    400148: Arrow_19
+    400150: Arrow_2
+    400152: Arrow_20
+    400154: Arrow_21
+    400156: Arrow_22
+    400158: Arrow_23
+    400160: Arrow_24
+    400162: Arrow_25
+    400164: Arrow_26
+    400166: Arrow_27
+    400168: Arrow_28
+    400170: Arrow_29
+    400172: Arrow_3
+    400174: Arrow_30
+    400176: Arrow_31
+    400178: Arrow_32
+    400180: Arrow_33
+    400182: Arrow_34
+    400184: Arrow_35
+    400186: Arrow_36
+    400188: Arrow_37
+    400190: Arrow_38
+    400192: Arrow_39
+    400194: Arrow_4
+    400196: Arrow_40
+    400198: Arrow_41
+    400200: Arrow_42
+    400202: Arrow_43
+    400204: Arrow_44
+    400206: Arrow_45
+    400208: Arrow_46
+    400210: Arrow_47
+    400212: Arrow_48
+    400214: Arrow_49
+    400216: Arrow_5
+    400218: Arrow_50
+    400220: Arrow_51
+    400222: Arrow_52
+    400224: Arrow_53
+    400226: Arrow_54
+    400228: Arrow_55
+    400230: Arrow_56
+    400232: Arrow_57
+    400234: Arrow_58
+    400236: Arrow_59
+    400238: Arrow_6
+    400240: Arrow_60
+    400242: Arrow_61
+    400244: Arrow_62
+    400246: Arrow_63
+    400248: Arrow_64
+    400250: Arrow_65
+    400252: Arrow_66
+    400254: Arrow_67
+    400256: Arrow_68
+    400258: Arrow_69
+    400260: Arrow_7
+    400262: Arrow_70
+    400264: Arrow_71
+    400266: Arrow_72
+    400268: Arrow_73
+    400270: Arrow_74
+    400272: Arrow_75
+    400274: Arrow_76
+    400276: Arrow_77
+    400278: Arrow_78
+    400280: Arrow_79
+    400282: Arrow_8
+    400284: Arrow_80
+    400286: Arrow_81
+    400288: Arrow_82
+    400290: Arrow_83
+    400292: Arrow_84
+    400294: Arrow_85
+    400296: Arrow_86
+    400298: Arrow_87
+    400300: Arrow_88
+    400302: Arrow_89
+    400304: Arrow_9
+    400306: Arrow_90
+    400308: Arrow_91
+    400310: Arrow_92
+    400312: Arrow_93
+    400314: Arrow_94
+    400316: Arrow_95
+    400318: Arrow_96
+    400320: Arrow_97
+    400322: Arrow_98
+    400324: Arrow_99
+    400326: Cerebellum_002
+    400328: FrontalLobe
+    400330: //RootNode
+    400332: Medulla_001
+    400334: Occipital_Lobe
+    400336: Parietal_Lobe
+    400338: SomatomotorCortex
+    400340: SomatosensoryCortex
+    400342: TemporalLobe
+    2300000: Arrow_1
+    2300002: Arrow_10
+    2300004: Arrow_100
+    2300006: Arrow_101
+    2300008: Arrow_102
+    2300010: Arrow_103
+    2300012: Arrow_104
+    2300014: Arrow_105
+    2300016: Arrow_106
+    2300018: Arrow_107
+    2300020: Arrow_108
+    2300022: Arrow_109
+    2300024: Arrow_11
+    2300026: Arrow_110
+    2300028: Arrow_111
+    2300030: Arrow_112
+    2300032: Arrow_113
+    2300034: Arrow_114
+    2300036: Arrow_115
+    2300038: Arrow_116
+    2300040: Arrow_117
+    2300042: Arrow_118
+    2300044: Arrow_119
+    2300046: Arrow_12
+    2300048: Arrow_120
+    2300050: Arrow_121
+    2300052: Arrow_122
+    2300054: Arrow_123
+    2300056: Arrow_124
+    2300058: Arrow_125
+    2300060: Arrow_126
+    2300062: Arrow_127
+    2300064: Arrow_128
+    2300066: Arrow_129
+    2300068: Arrow_13
+    2300070: Arrow_130
+    2300072: Arrow_131
+    2300074: Arrow_132
+    2300076: Arrow_133
+    2300078: Arrow_134
+    2300080: Arrow_135
+    2300082: Arrow_136
+    2300084: Arrow_137
+    2300086: Arrow_138
+    2300088: Arrow_139
+    2300090: Arrow_14
+    2300092: Arrow_140
+    2300094: Arrow_141
+    2300096: Arrow_142
+    2300098: Arrow_143
+    2300100: Arrow_144
+    2300102: Arrow_145
+    2300104: Arrow_146
+    2300106: Arrow_147
+    2300108: Arrow_148
+    2300110: Arrow_149
+    2300112: Arrow_15
+    2300114: Arrow_150
+    2300116: Arrow_151
+    2300118: Arrow_152
+    2300120: Arrow_153
+    2300122: Arrow_154
+    2300124: Arrow_155
+    2300126: Arrow_156
+    2300128: Arrow_157
+    2300130: Arrow_158
+    2300132: Arrow_159
+    2300134: Arrow_16
+    2300136: Arrow_160
+    2300138: Arrow_161
+    2300140: Arrow_162
+    2300142: Arrow_163
+    2300144: Arrow_17
+    2300146: Arrow_18
+    2300148: Arrow_19
+    2300150: Arrow_2
+    2300152: Arrow_20
+    2300154: Arrow_21
+    2300156: Arrow_22
+    2300158: Arrow_23
+    2300160: Arrow_24
+    2300162: Arrow_25
+    2300164: Arrow_26
+    2300166: Arrow_27
+    2300168: Arrow_28
+    2300170: Arrow_29
+    2300172: Arrow_3
+    2300174: Arrow_30
+    2300176: Arrow_31
+    2300178: Arrow_32
+    2300180: Arrow_33
+    2300182: Arrow_34
+    2300184: Arrow_35
+    2300186: Arrow_36
+    2300188: Arrow_37
+    2300190: Arrow_38
+    2300192: Arrow_39
+    2300194: Arrow_4
+    2300196: Arrow_40
+    2300198: Arrow_41
+    2300200: Arrow_42
+    2300202: Arrow_43
+    2300204: Arrow_44
+    2300206: Arrow_45
+    2300208: Arrow_46
+    2300210: Arrow_47
+    2300212: Arrow_48
+    2300214: Arrow_49
+    2300216: Arrow_5
+    2300218: Arrow_50
+    2300220: Arrow_51
+    2300222: Arrow_52
+    2300224: Arrow_53
+    2300226: Arrow_54
+    2300228: Arrow_55
+    2300230: Arrow_56
+    2300232: Arrow_57
+    2300234: Arrow_58
+    2300236: Arrow_59
+    2300238: Arrow_6
+    2300240: Arrow_60
+    2300242: Arrow_61
+    2300244: Arrow_62
+    2300246: Arrow_63
+    2300248: Arrow_64
+    2300250: Arrow_65
+    2300252: Arrow_66
+    2300254: Arrow_67
+    2300256: Arrow_68
+    2300258: Arrow_69
+    2300260: Arrow_7
+    2300262: Arrow_70
+    2300264: Arrow_71
+    2300266: Arrow_72
+    2300268: Arrow_73
+    2300270: Arrow_74
+    2300272: Arrow_75
+    2300274: Arrow_76
+    2300276: Arrow_77
+    2300278: Arrow_78
+    2300280: Arrow_79
+    2300282: Arrow_8
+    2300284: Arrow_80
+    2300286: Arrow_81
+    2300288: Arrow_82
+    2300290: Arrow_83
+    2300292: Arrow_84
+    2300294: Arrow_85
+    2300296: Arrow_86
+    2300298: Arrow_87
+    2300300: Arrow_88
+    2300302: Arrow_89
+    2300304: Arrow_9
+    2300306: Arrow_90
+    2300308: Arrow_91
+    2300310: Arrow_92
+    2300312: Arrow_93
+    2300314: Arrow_94
+    2300316: Arrow_95
+    2300318: Arrow_96
+    2300320: Arrow_97
+    2300322: Arrow_98
+    2300324: Arrow_99
+    2300326: Cerebellum_002
+    2300328: FrontalLobe
+    2300330: Medulla_001
+    2300332: Occipital_Lobe
+    2300334: Parietal_Lobe
+    2300336: SomatomotorCortex
+    2300338: SomatosensoryCortex
+    2300340: TemporalLobe
+    3300000: Arrow_1
+    3300002: Arrow_10
+    3300004: Arrow_100
+    3300006: Arrow_101
+    3300008: Arrow_102
+    3300010: Arrow_103
+    3300012: Arrow_104
+    3300014: Arrow_105
+    3300016: Arrow_106
+    3300018: Arrow_107
+    3300020: Arrow_108
+    3300022: Arrow_109
+    3300024: Arrow_11
+    3300026: Arrow_110
+    3300028: Arrow_111
+    3300030: Arrow_112
+    3300032: Arrow_113
+    3300034: Arrow_114
+    3300036: Arrow_115
+    3300038: Arrow_116
+    3300040: Arrow_117
+    3300042: Arrow_118
+    3300044: Arrow_119
+    3300046: Arrow_12
+    3300048: Arrow_120
+    3300050: Arrow_121
+    3300052: Arrow_122
+    3300054: Arrow_123
+    3300056: Arrow_124
+    3300058: Arrow_125
+    3300060: Arrow_126
+    3300062: Arrow_127
+    3300064: Arrow_128
+    3300066: Arrow_129
+    3300068: Arrow_13
+    3300070: Arrow_130
+    3300072: Arrow_131
+    3300074: Arrow_132
+    3300076: Arrow_133
+    3300078: Arrow_134
+    3300080: Arrow_135
+    3300082: Arrow_136
+    3300084: Arrow_137
+    3300086: Arrow_138
+    3300088: Arrow_139
+    3300090: Arrow_14
+    3300092: Arrow_140
+    3300094: Arrow_141
+    3300096: Arrow_142
+    3300098: Arrow_143
+    3300100: Arrow_144
+    3300102: Arrow_145
+    3300104: Arrow_146
+    3300106: Arrow_147
+    3300108: Arrow_148
+    3300110: Arrow_149
+    3300112: Arrow_15
+    3300114: Arrow_150
+    3300116: Arrow_151
+    3300118: Arrow_152
+    3300120: Arrow_153
+    3300122: Arrow_154
+    3300124: Arrow_155
+    3300126: Arrow_156
+    3300128: Arrow_157
+    3300130: Arrow_158
+    3300132: Arrow_159
+    3300134: Arrow_16
+    3300136: Arrow_160
+    3300138: Arrow_161
+    3300140: Arrow_162
+    3300142: Arrow_163
+    3300144: Arrow_17
+    3300146: Arrow_18
+    3300148: Arrow_19
+    3300150: Arrow_2
+    3300152: Arrow_20
+    3300154: Arrow_21
+    3300156: Arrow_22
+    3300158: Arrow_23
+    3300160: Arrow_24
+    3300162: Arrow_25
+    3300164: Arrow_26
+    3300166: Arrow_27
+    3300168: Arrow_28
+    3300170: Arrow_29
+    3300172: Arrow_3
+    3300174: Arrow_30
+    3300176: Arrow_31
+    3300178: Arrow_32
+    3300180: Arrow_33
+    3300182: Arrow_34
+    3300184: Arrow_35
+    3300186: Arrow_36
+    3300188: Arrow_37
+    3300190: Arrow_38
+    3300192: Arrow_39
+    3300194: Arrow_4
+    3300196: Arrow_40
+    3300198: Arrow_41
+    3300200: Arrow_42
+    3300202: Arrow_43
+    3300204: Arrow_44
+    3300206: Arrow_45
+    3300208: Arrow_46
+    3300210: Arrow_47
+    3300212: Arrow_48
+    3300214: Arrow_49
+    3300216: Arrow_5
+    3300218: Arrow_50
+    3300220: Arrow_51
+    3300222: Arrow_52
+    3300224: Arrow_53
+    3300226: Arrow_54
+    3300228: Arrow_55
+    3300230: Arrow_56
+    3300232: Arrow_57
+    3300234: Arrow_58
+    3300236: Arrow_59
+    3300238: Arrow_6
+    3300240: Arrow_60
+    3300242: Arrow_61
+    3300244: Arrow_62
+    3300246: Arrow_63
+    3300248: Arrow_64
+    3300250: Arrow_65
+    3300252: Arrow_66
+    3300254: Arrow_67
+    3300256: Arrow_68
+    3300258: Arrow_69
+    3300260: Arrow_7
+    3300262: Arrow_70
+    3300264: Arrow_71
+    3300266: Arrow_72
+    3300268: Arrow_73
+    3300270: Arrow_74
+    3300272: Arrow_75
+    3300274: Arrow_76
+    3300276: Arrow_77
+    3300278: Arrow_78
+    3300280: Arrow_79
+    3300282: Arrow_8
+    3300284: Arrow_80
+    3300286: Arrow_81
+    3300288: Arrow_82
+    3300290: Arrow_83
+    3300292: Arrow_84
+    3300294: Arrow_85
+    3300296: Arrow_86
+    3300298: Arrow_87
+    3300300: Arrow_88
+    3300302: Arrow_89
+    3300304: Arrow_9
+    3300306: Arrow_90
+    3300308: Arrow_91
+    3300310: Arrow_92
+    3300312: Arrow_93
+    3300314: Arrow_94
+    3300316: Arrow_95
+    3300318: Arrow_96
+    3300320: Arrow_97
+    3300322: Arrow_98
+    3300324: Arrow_99
+    3300326: Cerebellum_002
+    3300328: FrontalLobe
+    3300330: Medulla_001
+    3300332: Occipital_Lobe
+    3300334: Parietal_Lobe
+    3300336: SomatomotorCortex
+    3300338: SomatosensoryCortex
+    3300340: TemporalLobe
+    4300000: SomatosensoryCortex
+    4300002: SomatomotorCortex
+    4300004: Parietal_Lobe
+    4300006: Occipital_Lobe
+    4300008: TemporalLobe
+    4300010: FrontalLobe
+    4300012: Arrow_1
+    4300014: Arrow_2
+    4300016: Arrow_3
+    4300018: Arrow_4
+    4300020: Arrow_5
+    4300022: Arrow_6
+    4300024: Arrow_7
+    4300026: Arrow_8
+    4300028: Arrow_9
+    4300030: Arrow_10
+    4300032: Arrow_11
+    4300034: Arrow_12
+    4300036: Arrow_13
+    4300038: Arrow_14
+    4300040: Arrow_15
+    4300042: Arrow_16
+    4300044: Arrow_17
+    4300046: Arrow_18
+    4300048: Arrow_19
+    4300050: Arrow_20
+    4300052: Arrow_21
+    4300054: Arrow_22
+    4300056: Arrow_23
+    4300058: Arrow_24
+    4300060: Arrow_25
+    4300062: Arrow_26
+    4300064: Arrow_27
+    4300066: Arrow_28
+    4300068: Arrow_29
+    4300070: Arrow_30
+    4300072: Arrow_31
+    4300074: Arrow_32
+    4300076: Arrow_33
+    4300078: Arrow_34
+    4300080: Arrow_35
+    4300082: Arrow_36
+    4300084: Arrow_37
+    4300086: Arrow_38
+    4300088: Arrow_39
+    4300090: Arrow_40
+    4300092: Arrow_41
+    4300094: Arrow_42
+    4300096: Arrow_43
+    4300098: Arrow_44
+    4300100: Arrow_45
+    4300102: Arrow_46
+    4300104: Arrow_47
+    4300106: Arrow_48
+    4300108: Arrow_49
+    4300110: Arrow_50
+    4300112: Arrow_51
+    4300114: Arrow_52
+    4300116: Arrow_53
+    4300118: Arrow_54
+    4300120: Arrow_55
+    4300122: Arrow_56
+    4300124: Arrow_57
+    4300126: Arrow_58
+    4300128: Arrow_59
+    4300130: Arrow_60
+    4300132: Arrow_61
+    4300134: Arrow_62
+    4300136: Arrow_63
+    4300138: Arrow_64
+    4300140: Arrow_65
+    4300142: Arrow_66
+    4300144: Arrow_67
+    4300146: Arrow_68
+    4300148: Arrow_69
+    4300150: Arrow_70
+    4300152: Arrow_71
+    4300154: Arrow_72
+    4300156: Arrow_73
+    4300158: Arrow_74
+    4300160: Arrow_75
+    4300162: Arrow_76
+    4300164: Arrow_77
+    4300166: Arrow_78
+    4300168: Arrow_79
+    4300170: Arrow_80
+    4300172: Arrow_81
+    4300174: Arrow_82
+    4300176: Arrow_83
+    4300178: Arrow_84
+    4300180: Arrow_85
+    4300182: Arrow_86
+    4300184: Arrow_87
+    4300186: Arrow_88
+    4300188: Arrow_89
+    4300190: Arrow_90
+    4300192: Arrow_91
+    4300194: Arrow_92
+    4300196: Arrow_93
+    4300198: Arrow_94
+    4300200: Arrow_95
+    4300202: Arrow_96
+    4300204: Arrow_97
+    4300206: Arrow_98
+    4300208: Arrow_99
+    4300210: Arrow_100
+    4300212: Arrow_101
+    4300214: Arrow_102
+    4300216: Arrow_103
+    4300218: Arrow_104
+    4300220: Arrow_105
+    4300222: Arrow_106
+    4300224: Arrow_107
+    4300226: Arrow_108
+    4300228: Arrow_109
+    4300230: Arrow_110
+    4300232: Arrow_111
+    4300234: Arrow_112
+    4300236: Arrow_113
+    4300238: Arrow_114
+    4300240: Arrow_115
+    4300242: Arrow_116
+    4300244: Arrow_117
+    4300246: Arrow_118
+    4300248: Arrow_119
+    4300250: Arrow_120
+    4300252: Arrow_121
+    4300254: Arrow_122
+    4300256: Arrow_123
+    4300258: Arrow_124
+    4300260: Arrow_125
+    4300262: Arrow_126
+    4300264: Arrow_127
+    4300266: Arrow_128
+    4300268: Arrow_129
+    4300270: Arrow_130
+    4300272: Arrow_131
+    4300274: Cerebellum_002
+    4300276: Medulla_001
+    4300278: Arrow_132
+    4300280: Arrow_133
+    4300282: Arrow_134
+    4300284: Arrow_135
+    4300286: Arrow_136
+    4300288: Arrow_137
+    4300290: Arrow_138
+    4300292: Arrow_139
+    4300294: Arrow_140
+    4300296: Arrow_141
+    4300298: Arrow_142
+    4300300: Arrow_143
+    4300302: Arrow_144
+    4300304: Arrow_145
+    4300306: Arrow_146
+    4300308: Arrow_147
+    4300310: Arrow_148
+    4300312: Arrow_149
+    4300314: Arrow_150
+    4300316: Arrow_151
+    4300318: Arrow_152
+    4300320: Arrow_153
+    4300322: Arrow_154
+    4300324: Arrow_155
+    4300326: Arrow_156
+    4300328: Arrow_157
+    4300330: Arrow_158
+    4300332: Arrow_159
+    4300334: Arrow_160
+    4300336: Arrow_161
+    4300338: Arrow_162
+    4300340: Arrow_163
+    7400000: FullBrain_Lobes
+    7400002: Blood_Flow
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FullBrain_Lobes
+      takeName: FullBrain_Lobes
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arrow_1
+        weight: 1
+      - path: Arrow_2
+        weight: 1
+      - path: Arrow_3
+        weight: 1
+      - path: Arrow_4
+        weight: 1
+      - path: Arrow_5
+        weight: 1
+      - path: Arrow_6
+        weight: 1
+      - path: Arrow_7
+        weight: 1
+      - path: Arrow_8
+        weight: 1
+      - path: Arrow_9
+        weight: 1
+      - path: Arrow_10
+        weight: 1
+      - path: Arrow_11
+        weight: 1
+      - path: Arrow_12
+        weight: 1
+      - path: Arrow_13
+        weight: 1
+      - path: Arrow_14
+        weight: 1
+      - path: Arrow_15
+        weight: 1
+      - path: Arrow_16
+        weight: 1
+      - path: Arrow_17
+        weight: 1
+      - path: Arrow_18
+        weight: 1
+      - path: Arrow_19
+        weight: 1
+      - path: Arrow_20
+        weight: 1
+      - path: Arrow_21
+        weight: 1
+      - path: Arrow_22
+        weight: 1
+      - path: Arrow_23
+        weight: 1
+      - path: Arrow_24
+        weight: 1
+      - path: Arrow_25
+        weight: 1
+      - path: Arrow_26
+        weight: 1
+      - path: Arrow_27
+        weight: 1
+      - path: Arrow_28
+        weight: 1
+      - path: Arrow_29
+        weight: 1
+      - path: Arrow_30
+        weight: 1
+      - path: Arrow_31
+        weight: 1
+      - path: Arrow_32
+        weight: 1
+      - path: Arrow_33
+        weight: 1
+      - path: Arrow_34
+        weight: 1
+      - path: Arrow_35
+        weight: 1
+      - path: Arrow_36
+        weight: 1
+      - path: Arrow_37
+        weight: 1
+      - path: Arrow_38
+        weight: 1
+      - path: Arrow_39
+        weight: 1
+      - path: Arrow_40
+        weight: 1
+      - path: Arrow_41
+        weight: 1
+      - path: Arrow_42
+        weight: 1
+      - path: Arrow_43
+        weight: 1
+      - path: Arrow_44
+        weight: 1
+      - path: Arrow_45
+        weight: 1
+      - path: Arrow_46
+        weight: 1
+      - path: Arrow_47
+        weight: 1
+      - path: Arrow_48
+        weight: 1
+      - path: Arrow_49
+        weight: 1
+      - path: Arrow_50
+        weight: 1
+      - path: Arrow_51
+        weight: 1
+      - path: Arrow_52
+        weight: 1
+      - path: Arrow_53
+        weight: 1
+      - path: Arrow_54
+        weight: 1
+      - path: Arrow_55
+        weight: 1
+      - path: Arrow_56
+        weight: 1
+      - path: Arrow_57
+        weight: 1
+      - path: Arrow_58
+        weight: 1
+      - path: Arrow_59
+        weight: 1
+      - path: Arrow_60
+        weight: 1
+      - path: Arrow_61
+        weight: 1
+      - path: Arrow_62
+        weight: 1
+      - path: Arrow_63
+        weight: 1
+      - path: Arrow_64
+        weight: 1
+      - path: Arrow_65
+        weight: 1
+      - path: Arrow_66
+        weight: 1
+      - path: Arrow_67
+        weight: 1
+      - path: Arrow_68
+        weight: 1
+      - path: Arrow_69
+        weight: 1
+      - path: Arrow_70
+        weight: 1
+      - path: Arrow_71
+        weight: 1
+      - path: Arrow_72
+        weight: 1
+      - path: Arrow_73
+        weight: 1
+      - path: Arrow_74
+        weight: 1
+      - path: Arrow_75
+        weight: 1
+      - path: Arrow_76
+        weight: 1
+      - path: Arrow_77
+        weight: 1
+      - path: Arrow_78
+        weight: 1
+      - path: Arrow_79
+        weight: 1
+      - path: Arrow_80
+        weight: 1
+      - path: Arrow_81
+        weight: 1
+      - path: Arrow_82
+        weight: 1
+      - path: Arrow_83
+        weight: 1
+      - path: Arrow_84
+        weight: 1
+      - path: Arrow_85
+        weight: 1
+      - path: Arrow_86
+        weight: 1
+      - path: Arrow_87
+        weight: 1
+      - path: Arrow_88
+        weight: 1
+      - path: Arrow_89
+        weight: 1
+      - path: Arrow_90
+        weight: 1
+      - path: Arrow_91
+        weight: 1
+      - path: Arrow_92
+        weight: 1
+      - path: Arrow_93
+        weight: 1
+      - path: Arrow_94
+        weight: 1
+      - path: Arrow_95
+        weight: 1
+      - path: Arrow_96
+        weight: 1
+      - path: Arrow_97
+        weight: 1
+      - path: Arrow_98
+        weight: 1
+      - path: Arrow_99
+        weight: 1
+      - path: Arrow_100
+        weight: 1
+      - path: Arrow_101
+        weight: 1
+      - path: Arrow_102
+        weight: 1
+      - path: Arrow_103
+        weight: 1
+      - path: Arrow_104
+        weight: 1
+      - path: Arrow_105
+        weight: 1
+      - path: Arrow_106
+        weight: 1
+      - path: Arrow_107
+        weight: 1
+      - path: Arrow_108
+        weight: 1
+      - path: Arrow_109
+        weight: 1
+      - path: Arrow_110
+        weight: 1
+      - path: Arrow_111
+        weight: 1
+      - path: Arrow_112
+        weight: 1
+      - path: Arrow_113
+        weight: 1
+      - path: Arrow_114
+        weight: 1
+      - path: Arrow_115
+        weight: 1
+      - path: Arrow_116
+        weight: 1
+      - path: Arrow_117
+        weight: 1
+      - path: Arrow_118
+        weight: 1
+      - path: Arrow_119
+        weight: 1
+      - path: Arrow_120
+        weight: 1
+      - path: Arrow_121
+        weight: 1
+      - path: Arrow_122
+        weight: 1
+      - path: Arrow_123
+        weight: 1
+      - path: Arrow_124
+        weight: 1
+      - path: Arrow_125
+        weight: 1
+      - path: Arrow_126
+        weight: 1
+      - path: Arrow_127
+        weight: 1
+      - path: Arrow_128
+        weight: 1
+      - path: Arrow_129
+        weight: 1
+      - path: Arrow_130
+        weight: 1
+      - path: Arrow_131
+        weight: 1
+      - path: Arrow_132
+        weight: 1
+      - path: Arrow_133
+        weight: 1
+      - path: Arrow_134
+        weight: 1
+      - path: Arrow_135
+        weight: 1
+      - path: Arrow_136
+        weight: 1
+      - path: Arrow_137
+        weight: 1
+      - path: Arrow_138
+        weight: 1
+      - path: Arrow_139
+        weight: 1
+      - path: Arrow_140
+        weight: 1
+      - path: Arrow_141
+        weight: 1
+      - path: Arrow_142
+        weight: 1
+      - path: Arrow_143
+        weight: 1
+      - path: Arrow_144
+        weight: 1
+      - path: Arrow_145
+        weight: 1
+      - path: Arrow_146
+        weight: 1
+      - path: Arrow_147
+        weight: 1
+      - path: Arrow_148
+        weight: 1
+      - path: Arrow_149
+        weight: 1
+      - path: Arrow_150
+        weight: 1
+      - path: Arrow_151
+        weight: 1
+      - path: Arrow_152
+        weight: 1
+      - path: Arrow_153
+        weight: 1
+      - path: Arrow_154
+        weight: 1
+      - path: Arrow_155
+        weight: 1
+      - path: Arrow_156
+        weight: 1
+      - path: Arrow_157
+        weight: 1
+      - path: Arrow_158
+        weight: 1
+      - path: Arrow_159
+        weight: 1
+      - path: Arrow_160
+        weight: 1
+      - path: Arrow_161
+        weight: 1
+      - path: Arrow_162
+        weight: 1
+      - path: Arrow_163
+        weight: 1
+      - path: Cerebellum_002
+        weight: 1
+      - path: FrontalLobe
+        weight: 1
+      - path: Medulla_001
+        weight: 1
+      - path: Occipital_Lobe
+        weight: 1
+      - path: Parietal_Lobe
+        weight: 1
+      - path: SomatomotorCortex
+        weight: 1
+      - path: SomatosensoryCortex
+        weight: 1
+      - path: TemporalLobe
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Blood_Flow
+      takeName: FullBrain_Lobes
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arrow_1
+        weight: 1
+      - path: Arrow_2
+        weight: 1
+      - path: Arrow_3
+        weight: 1
+      - path: Arrow_4
+        weight: 1
+      - path: Arrow_5
+        weight: 1
+      - path: Arrow_6
+        weight: 1
+      - path: Arrow_7
+        weight: 1
+      - path: Arrow_8
+        weight: 1
+      - path: Arrow_9
+        weight: 1
+      - path: Arrow_10
+        weight: 1
+      - path: Arrow_11
+        weight: 1
+      - path: Arrow_12
+        weight: 1
+      - path: Arrow_13
+        weight: 1
+      - path: Arrow_14
+        weight: 1
+      - path: Arrow_15
+        weight: 1
+      - path: Arrow_16
+        weight: 1
+      - path: Arrow_17
+        weight: 1
+      - path: Arrow_18
+        weight: 1
+      - path: Arrow_19
+        weight: 1
+      - path: Arrow_20
+        weight: 1
+      - path: Arrow_21
+        weight: 1
+      - path: Arrow_22
+        weight: 1
+      - path: Arrow_23
+        weight: 1
+      - path: Arrow_24
+        weight: 1
+      - path: Arrow_25
+        weight: 1
+      - path: Arrow_26
+        weight: 1
+      - path: Arrow_27
+        weight: 1
+      - path: Arrow_28
+        weight: 1
+      - path: Arrow_29
+        weight: 1
+      - path: Arrow_30
+        weight: 1
+      - path: Arrow_31
+        weight: 1
+      - path: Arrow_32
+        weight: 1
+      - path: Arrow_33
+        weight: 1
+      - path: Arrow_34
+        weight: 1
+      - path: Arrow_35
+        weight: 1
+      - path: Arrow_36
+        weight: 1
+      - path: Arrow_37
+        weight: 1
+      - path: Arrow_38
+        weight: 1
+      - path: Arrow_39
+        weight: 1
+      - path: Arrow_40
+        weight: 1
+      - path: Arrow_41
+        weight: 1
+      - path: Arrow_42
+        weight: 1
+      - path: Arrow_43
+        weight: 1
+      - path: Arrow_44
+        weight: 1
+      - path: Arrow_45
+        weight: 1
+      - path: Arrow_46
+        weight: 1
+      - path: Arrow_47
+        weight: 1
+      - path: Arrow_48
+        weight: 1
+      - path: Arrow_49
+        weight: 1
+      - path: Arrow_50
+        weight: 1
+      - path: Arrow_51
+        weight: 1
+      - path: Arrow_52
+        weight: 1
+      - path: Arrow_53
+        weight: 1
+      - path: Arrow_54
+        weight: 1
+      - path: Arrow_55
+        weight: 1
+      - path: Arrow_56
+        weight: 1
+      - path: Arrow_57
+        weight: 1
+      - path: Arrow_58
+        weight: 1
+      - path: Arrow_59
+        weight: 1
+      - path: Arrow_60
+        weight: 1
+      - path: Arrow_61
+        weight: 1
+      - path: Arrow_62
+        weight: 1
+      - path: Arrow_63
+        weight: 1
+      - path: Arrow_64
+        weight: 1
+      - path: Arrow_65
+        weight: 1
+      - path: Arrow_66
+        weight: 1
+      - path: Arrow_67
+        weight: 1
+      - path: Arrow_68
+        weight: 1
+      - path: Arrow_69
+        weight: 1
+      - path: Arrow_70
+        weight: 1
+      - path: Arrow_71
+        weight: 1
+      - path: Arrow_72
+        weight: 1
+      - path: Arrow_73
+        weight: 1
+      - path: Arrow_74
+        weight: 1
+      - path: Arrow_75
+        weight: 1
+      - path: Arrow_76
+        weight: 1
+      - path: Arrow_77
+        weight: 1
+      - path: Arrow_78
+        weight: 1
+      - path: Arrow_79
+        weight: 1
+      - path: Arrow_80
+        weight: 1
+      - path: Arrow_81
+        weight: 1
+      - path: Arrow_82
+        weight: 1
+      - path: Arrow_83
+        weight: 1
+      - path: Arrow_84
+        weight: 1
+      - path: Arrow_85
+        weight: 1
+      - path: Arrow_86
+        weight: 1
+      - path: Arrow_87
+        weight: 1
+      - path: Arrow_88
+        weight: 1
+      - path: Arrow_89
+        weight: 1
+      - path: Arrow_90
+        weight: 1
+      - path: Arrow_91
+        weight: 1
+      - path: Arrow_92
+        weight: 1
+      - path: Arrow_93
+        weight: 1
+      - path: Arrow_94
+        weight: 1
+      - path: Arrow_95
+        weight: 1
+      - path: Arrow_96
+        weight: 1
+      - path: Arrow_97
+        weight: 1
+      - path: Arrow_98
+        weight: 1
+      - path: Arrow_99
+        weight: 1
+      - path: Arrow_100
+        weight: 1
+      - path: Arrow_101
+        weight: 1
+      - path: Arrow_102
+        weight: 1
+      - path: Arrow_103
+        weight: 1
+      - path: Arrow_104
+        weight: 1
+      - path: Arrow_105
+        weight: 1
+      - path: Arrow_106
+        weight: 1
+      - path: Arrow_107
+        weight: 1
+      - path: Arrow_108
+        weight: 1
+      - path: Arrow_109
+        weight: 1
+      - path: Arrow_110
+        weight: 1
+      - path: Arrow_111
+        weight: 1
+      - path: Arrow_112
+        weight: 1
+      - path: Arrow_113
+        weight: 1
+      - path: Arrow_114
+        weight: 1
+      - path: Arrow_115
+        weight: 1
+      - path: Arrow_116
+        weight: 1
+      - path: Arrow_117
+        weight: 1
+      - path: Arrow_118
+        weight: 1
+      - path: Arrow_119
+        weight: 1
+      - path: Arrow_120
+        weight: 1
+      - path: Arrow_121
+        weight: 1
+      - path: Arrow_122
+        weight: 1
+      - path: Arrow_123
+        weight: 1
+      - path: Arrow_124
+        weight: 1
+      - path: Arrow_125
+        weight: 1
+      - path: Arrow_126
+        weight: 1
+      - path: Arrow_127
+        weight: 1
+      - path: Arrow_128
+        weight: 1
+      - path: Arrow_129
+        weight: 1
+      - path: Arrow_130
+        weight: 1
+      - path: Arrow_131
+        weight: 1
+      - path: Arrow_132
+        weight: 1
+      - path: Arrow_133
+        weight: 1
+      - path: Arrow_134
+        weight: 1
+      - path: Arrow_135
+        weight: 1
+      - path: Arrow_136
+        weight: 1
+      - path: Arrow_137
+        weight: 1
+      - path: Arrow_138
+        weight: 1
+      - path: Arrow_139
+        weight: 1
+      - path: Arrow_140
+        weight: 1
+      - path: Arrow_141
+        weight: 1
+      - path: Arrow_142
+        weight: 1
+      - path: Arrow_143
+        weight: 1
+      - path: Arrow_144
+        weight: 1
+      - path: Arrow_145
+        weight: 1
+      - path: Arrow_146
+        weight: 1
+      - path: Arrow_147
+        weight: 1
+      - path: Arrow_148
+        weight: 1
+      - path: Arrow_149
+        weight: 1
+      - path: Arrow_150
+        weight: 1
+      - path: Arrow_151
+        weight: 1
+      - path: Arrow_152
+        weight: 1
+      - path: Arrow_153
+        weight: 1
+      - path: Arrow_154
+        weight: 1
+      - path: Arrow_155
+        weight: 1
+      - path: Arrow_156
+        weight: 1
+      - path: Arrow_157
+        weight: 1
+      - path: Arrow_158
+        weight: 1
+      - path: Arrow_159
+        weight: 1
+      - path: Arrow_160
+        weight: 1
+      - path: Arrow_161
+        weight: 1
+      - path: Arrow_162
+        weight: 1
+      - path: Arrow_163
+        weight: 1
+      - path: Cerebellum_002
+        weight: 1
+      - path: FrontalLobe
+        weight: 1
+      - path: Medulla_001
+        weight: 1
+      - path: Occipital_Lobe
+        weight: 1
+      - path: Parietal_Lobe
+        weight: 1
+      - path: SomatomotorCortex
+        weight: 1
+      - path: SomatosensoryCortex
+        weight: 1
+      - path: TemporalLobe
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
