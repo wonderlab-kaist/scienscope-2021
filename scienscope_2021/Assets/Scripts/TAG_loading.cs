@@ -41,7 +41,7 @@ public class TAG_loading : MonoBehaviour
         {
             //heading.text = "rea";
             //Debug.Log(tmp);
-            scienscope_illust.transform.position = sc_illust_origin + new Vector3((255-tmp.distance)*0.00125f, 0, 0);
+            scienscope_illust.transform.position = sc_illust_origin - new Vector3(0, (255 - tmp.distance) * 0.0025f, 0);
 
 
             if (!(tmp.tag_id[0] == 0&& tmp.tag_id[1] == 0&& tmp.tag_id[2] == 0&& tmp.tag_id[3] == 0) && !scene_detected)

@@ -125,7 +125,7 @@ public class Camera_Movement_Moon : MonoBehaviour
 
                 rotate_smooth(new Vector3(0, -rig.localEulerAngles.z, 0));
 
-                delta = cam.localRotation * delta;
+                delta = cam.localRotation * Quaternion.Euler(0,0,90f) * delta;
                 move_smooth(delta);
                 
             }else if (data.distance >= distance_limitation)
