@@ -24,7 +24,7 @@ public class watch_control : MonoBehaviour
         if (tmp != null && Application.platform == RuntimePlatform.Android)
         {
             //heading.text = "rea";
-            //Debug.Log(tmp);
+            Debug.Log(System.BitConverter.ToString(tmp.tag_id).Replace("-", ""));
             //scienscope_illust.transform.position = sc_illust_origin + new Vector3((255 - tmp.distance) * 0.00125f, 0, 0);
 
 

@@ -878,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 6402122941289838925, guid: a11a62b43551f714ba9484f10da5a4a2,
         type: 3}
       propertyPath: default_ble_address
-      value: C3:EF:4B:B7:7C:20
+      value: CD:4D:DB:E1:65:DA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11a62b43551f714ba9484f10da5a4a2, type: 3}
@@ -1690,7 +1690,7 @@ RectTransform:
   m_GameObject: {fileID: 1967290853}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -97}
-  m_LocalScale: {x: 2.446914, y: 2.446914, z: 2.446914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 592194405}
   m_RootOrder: 7
@@ -1698,7 +1698,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 2000, y: 600}
+  m_SizeDelta: {x: 2000, y: 1500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967290855
 MonoBehaviour:
@@ -1722,11 +1722,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: cf5d2ab97ce47e7498b14aa4af62daaf, type: 3}
-    m_FontSize: 82
+    m_FontSize: 184
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 258
+    m_MinSize: 2
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

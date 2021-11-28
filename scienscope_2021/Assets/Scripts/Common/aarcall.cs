@@ -15,18 +15,6 @@ public class aarcall : MonoBehaviour
     private AndroidJavaObject plugin;
     private bool listening = false;
 
-    public readonly Dictionary<string, string> BTAdresses = new Dictionary<string, string>
-    {
-        // Order does not matter
-        // { DEVICE_ID, BT_ADDRESS },
-        { "52b462b3e6155528701ef574f80567cd", "C0:71:93:E7:4E:9C" }, // Labeled "1"
-        { "02bd87c91839f460f47aab7416e79bb0", "CF:8E:09:65:A2:2A" }, // Labeled "2"
-        { "7f43df7cd3722a08c97180f49c7315ed", "CE:5F:E8:39:1B:7F" }, // Labeled "3"
-        { "3f45d020fe1e68e46318065ccfe8c456", "D4:51:6E:11:D5:B9" },
-        { "cceb48d01d5382b20e9a403c2f75ee76", "E0:D9:98:07:E5:26" }, // Labeled "4"
-        { "b2f388211244904efb04d657dce3855a", "E2:39:AF:10:0A:73" }, // Labeled "5"
-    };
-
 
     void Start()
     {

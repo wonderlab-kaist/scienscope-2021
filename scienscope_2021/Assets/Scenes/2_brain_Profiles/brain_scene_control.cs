@@ -33,7 +33,7 @@ public class brain_scene_control : MonoBehaviour
         ear_btn.interactable = false;
 
         //if (RFID=="4B1C20AD")
-        if (RFID == "04587B9A")
+        if (RFID == "04727B9A") // Frontal_Language
         {
             //sub_brain[0].GetComponent<glowmanager_r>().SetGlow();
             stimulate_btn[2].interactable = true;

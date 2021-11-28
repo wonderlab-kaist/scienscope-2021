@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623e11464796a423cb411efeca82f5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gain: 0.00013
+  gain: 0.0001
   raw_data: {fileID: 1441419658}
   brain_pivot: {fileID: 1489267289}
   cam: {fileID: 1188549972}
@@ -3492,7 +3492,7 @@ PrefabInstance:
     - target: {fileID: 6402122941289838925, guid: a11a62b43551f714ba9484f10da5a4a2,
         type: 3}
       propertyPath: default_ble_address
-      value: ED:41:B5:30:7F:BE
+      value: E9:A4:6B:57:78:14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11a62b43551f714ba9484f10da5a4a2, type: 3}

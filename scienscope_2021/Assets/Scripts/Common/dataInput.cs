@@ -26,24 +26,6 @@ public class dataInput : MonoBehaviour
         {
             return null;
         }
-        //Debug.Log(tmp);
-
-        /*if (tmp.Contains("rfID"))
-        {
-            //tmp.IndexOf("rfT");
-            
-            if(tmp.Split(':').Length>2 && tmp.Split(':')[2].Length < 8)
-            {
-                //Debug.Log(tmp.Split('D')[1].Length);
-                tmp += data_in[0];
-                Debug.Log(tmp);
-                data_in.RemoveAt(0);
-            }
-
-            return tmp;
-        }
-
-        string[] segments = tmp.Split('!');*/
 
         return tmp;
         

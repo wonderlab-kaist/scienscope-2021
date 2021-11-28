@@ -42,20 +42,38 @@ public class TAG_loading : MonoBehaviour
             //heading.text = "rea";
             //Debug.Log(tmp);
             scienscope_illust.transform.position = sc_illust_origin + new Vector3((255-tmp.distance)*0.00125f, 0, 0);
-
+            
 
             if (!(tmp.tag_id[0] == 0&& tmp.tag_id[1] == 0&& tmp.tag_id[2] == 0&& tmp.tag_id[3] == 0) && !scene_detected)
             {
                 Instantiate(ps_effect, ps_origin).transform.localPosition = Vector3.zero;
 
                 explain.text = "잠시만 기다려주세요...";
-                Debug.Log(System.BitConverter.ToString(tmp.tag_id).Replace("-",""));
+                Debug.Log(System.BitConverter.ToString(tmp.tag_id).Replace("-", ""));
                 string id = System.BitConverter.ToString(tmp.tag_id).Replace("-", "");
                 address.SetLastRFID(id); //save RFID Address for load in next scene
 
-                /// move on contents scenes ///
-                scene_detected = true;
-                SceneManager.LoadSceneAsync(1, LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                for (int i = 0; i < RFID_address.Length; i++)
+                {
+                    if (RFID_address[i].Equals(id))
+                    {
+                        if (i == 0)
+                        {
+                            /// move on contents scenes ///
+                            scene_detected = true;
+                            SceneManager.LoadSceneAsync(1, LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                        }
+                        else
+                        {
+                            /// move on contents scenes ///
+                            scene_detected = true;
+                            SceneManager.LoadSceneAsync(2, LoadSceneMode.Single); ///i값을 원하는 scene의 build index로 대체
+                        }
+                    }
+                }
+                
+
+                
                 
                 
             }

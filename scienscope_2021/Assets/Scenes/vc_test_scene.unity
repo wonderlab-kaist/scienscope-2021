@@ -7730,7 +7730,7 @@ MonoBehaviour:
   cam: {fileID: 596157890}
   rig: {fileID: 1114040581}
   isthisWatch: 0
-  use_gravity: 0
+  use_gravity: 1
 --- !u!4 &1155472696
 Transform:
   m_ObjectHideFlags: 0
