@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_RFID_waiting.unity
     guid: ac6878f61ba08a946a6ff7e8086f8c98
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Moon/Scene/Moon_scene.unity
     guid: 3d5ef07c708abab4f9bd66318bde789b
+  - enabled: 0
+    path: Assets/Scenes/rfid_reader_.unity
+    guid: fba0f46b8f8f5084bb647b864fba4ba0
+  - enabled: 1
+    path: Assets/Scenes/Cave/Demo/demo.unity
+    guid: 6e4f4176fe626b44980f1d9260d29259
   m_configObjects: {}

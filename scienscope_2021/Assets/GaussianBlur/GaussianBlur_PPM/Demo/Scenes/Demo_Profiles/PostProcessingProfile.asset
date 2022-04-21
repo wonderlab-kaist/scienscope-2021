@@ -1,0 +1,946 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: PostProcessingProfile
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 114595436858689008}
+--- !u!114 &114007775263967836
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 18
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114094341353692632
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Blur
+  m_EditorClassIdentifier: Assembly-CSharp::Blur
+--- !u!114 &114108534897029066
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 21
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114125584386708838
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 55
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114126552432762144
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 100
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 1
+--- !u!114 &114148433376499698
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 52
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114199586785238596
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 5
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 1
+--- !u!114 &114206690071093330
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 79
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114230821346827724
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 17
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114297356855134734
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 0
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 1
+--- !u!114 &114455963024959814
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Blur
+  m_EditorClassIdentifier: Assembly-CSharp::Blur
+--- !u!114 &114540711955629248
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 26
+  DownRes:
+    overrideState: 0
+    value: 1
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 1
+--- !u!114 &114554377783314246
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 1000
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 1
+--- !u!114 &114556870408813906
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 0
+    value: 0
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114558394383623092
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 33
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114595436858689008
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9cd3c3ee7ecc64c8a469efaf74ebad, type: 3}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 74
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 1
+    value: 0.743
+  Saturation:
+    overrideState: 1
+    value: 1
+  Tint:
+    overrideState: 0
+    value: {r: 0, g: 0.308496, b: 1, a: 1}
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114621289394352204
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 100
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 0.781
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 0.6084906
+      g: 1
+      b: 0.7215493
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 1
+--- !u!114 &114652437433407016
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 35
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 1
+    value: 1
+  Saturation:
+    overrideState: 1
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114699578426892288
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 0
+    value: 0
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114707226452520032
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 51
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114757221825915614
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 33
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114881107183852372
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 56
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114901816285849950
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 34
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114915367829157326
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Blur
+  m_EditorClassIdentifier: Assembly-CSharp::Blur
+--- !u!114 &114933903398643124
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 219
+  DownRes:
+    overrideState: 1
+    value: 4
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 0
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114947639918683854
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: BlurSettings
+  m_EditorClassIdentifier: Assembly-CSharp::BlurSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Iterations:
+    overrideState: 1
+    value: 100
+  DownRes:
+    overrideState: 0
+    value: 0
+  Lightness:
+    overrideState: 0
+    value: 1
+  Saturation:
+    overrideState: 0
+    value: 1
+  Tint:
+    overrideState: 0
+    value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  DebugView:
+    overrideState: 0
+    value: 0
+--- !u!114 &114956789511026924
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Blur
+  m_EditorClassIdentifier: Assembly-CSharp::Blur
+--- !u!114 &114957848929804452
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Blur
+  m_EditorClassIdentifier: Assembly-CSharp::Blur
